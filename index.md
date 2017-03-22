@@ -59,8 +59,8 @@ log(ast.getLineNo(), ast.getColumnNo(),
 ```
 When run the code against TEAMMATES ([bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099 at master)), here are reports for `checkstyleMain` and `checkstyleTest`
 
-- [CheckstyleMain](http://htmlpreview.github.io/?)
-- [CheckstyleTest](http://htmlpreview.github.io/?)
+- [CheckstyleMain](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/booleanNaming/main.html)
+- [CheckstyleTest](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/booleanNaming/test.html)
 
 For production code, there are 122 violations. Some of them may be reasonable as its name may start with `allow` instead of `is, has, can, should`. For the negation of naming, there are some false positive such as `isNotSureAllowed` and `isNotificationIconShown`.
 
