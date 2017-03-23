@@ -103,7 +103,61 @@ The rule is enforced in [#6814](https://github.com/TEAMMATES/teammates/pull/6814
 Sample violation:
 ![Image](codingStandard/commentsIndentation/violation.png)
 
-##### Spelling of word
+##### Spelling of words
+
+The most boring thing for reviewer is to finding typos in PR. The reviewer may need to spend unnecessary time to find typos. Also, the submitter get disappointed. If we follow strictly the camel case naming conversion and use underscore to separate word in constants. We can leave this work to computer bots.
+
+The idea is that we extract words from variable name or method name and check whether it exists in english dictionary to find typos.
+
+[Here](https://github.com/dwyl/english-words) is the list of around 34 thousands english word list. In addition, we could define our own word such as `html`, `css` and `tooltips`
+
+Customised CheckStyle check:
+
+``` java
+@Override
+public void visitToken(DetailAST ast) {
+    String name = getName(ast);
+
+    String[] wordsWithoutUnderscore = name.split("_");
+    for (String segment : wordsWithoutUnderscore) {
+        String[] words = segment.split(CAMEL_CASE_SPLITER_REGEX);
+        for(String word : words) {
+            if (!isNameValid(word.toLowerCase())) {
+                log(ast.getLineNo(), ast.getColumnNo(), // violation caught
+                        String.format(MSG, word), ast.getText());
+            }
+        }
+    }
+}
+```
+
+Here are two dictionary used in the checks
+
+- [English words](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/dict.txt)
+- [Words defined by TEAMMATES](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict.txt)
+
+When running the check again master (at [8f8738](https://github.com/TEAMMATES/teammates/tree/8f87384b01cbe910d805d33bd19f77636c85d06d)), we get 658 violation for **production code** ([Detail report of violations](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/spelling/main.html)). There are some false positives. However, there are many real typos founded. 
+
+![Image](codingStandard/spelling/violation_finalised.png)
+
+In addition, we also found a lot of `name1`, `name2`, `student1` etc. For test code, these should be ok. However, for production code, naming in this way would result in confusing.
+
+![Image](codingStandard/spelling/violation_student1.png)
+
+Here is the report for test case. Note that a new file ([Regex Name](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict-regex.txt)) should be added as we allow naming like `name1`, `session1` etc in test code for testing.
+
+[Detailed checkstyle report for Test code](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/spelling/test.html)
+
+There are 532 violations in the test code. Some of them is false positive. However, there are real typos.
+
+![Image](codingStandard/spelling/violation_instructor.png)
+
+Furthermore, we can also see the violation of naming conversion. 
+
+![Image](codingStandard/spelling/violation_naming.png)
+
+In this case, `instructor1ofCourse1` should be `instructor1OfCourse1` (although it is arguable whether to capitalised the `o` or not).
+
 
 #### Design Principle
 
