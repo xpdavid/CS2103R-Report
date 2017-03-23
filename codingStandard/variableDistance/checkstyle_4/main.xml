@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.19">
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CommentParticipantType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CommentSearchResultBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CommentSendingState.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CommentStatus.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CourseDetailsBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CourseEnrollmentResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CourseRoster.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CourseStats.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/CourseSummaryBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/DataBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackParticipantType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackResponseCommentSearchResultBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackSessionDetailsBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackSessionQuestionsBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackSessionResponseStatus.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackSessionResultsBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackSessionStats.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/FeedbackSessionType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/InstructorPrivileges.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/InstructorSearchResultBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/SearchResultBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/SectionDetailsBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/StudentAttributesFactory.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/StudentEnrollDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/StudentResultSummary.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/StudentSearchResultBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/StudentUpdateStatus.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/TeamDetailsBundle.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/TeamEvalResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/UserRole.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/UserType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/AccountAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/AdminEmailAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/CommentAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/CourseAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/EntityAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/FeedbackQuestionAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/FeedbackResponseAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/FeedbackResponseCommentAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/FeedbackSessionAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/InstructorAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/SessionAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/StudentAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/StudentProfileAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/attributes/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackConstantSumQuestionDetails.java">
+<error line="72" severity="error" message="Distance between variable &apos;pointsForEachRecipientString&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="73" severity="error" message="Distance between variable &apos;forceUnevenDistributionString&apos; declaration and its first usage is 9, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="74" severity="error" message="Distance between variable &apos;distributeToRecipients&apos; declaration and its first usage is 10, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="75" severity="error" message="Distance between variable &apos;pointsPerOption&apos; declaration and its first usage is 11, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="76" severity="error" message="Distance between variable &apos;forceUnevenDistribution&apos; declaration and its first usage is 13, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackConstantSumResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackContributionQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackContributionResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackMcqQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackMcqResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackMsqQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackMsqResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackNumericalScaleQuestionDetails.java">
+<error line="336" severity="error" message="Distance between variable &apos;averageScoreExcludingSelf&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackNumericalScaleResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackQuestionType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRankOptionsQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRankOptionsResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRankQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRankRecipientsQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRankRecipientsResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRankResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRubricQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackRubricResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackTextQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/FeedbackTextResponseDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/datatransfer/questions/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/EmailSendingException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/EnrollException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/EntityAlreadyExistsException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/EntityDoesNotExistException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/EntityNotFoundException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/ExceedingRangeException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/FeedbackSessionNotVisibleException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/InvalidParametersException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/JoinCourseException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/NullPostParameterException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/PageNotFoundException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/TeammatesException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/UnauthorizedAccessException.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/exception/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Activity.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/ActivityLogEntry.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/AdminLogQuery.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/AppUrl.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Assumption.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Config.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Const.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/EmailLogEntry.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/EmailType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/EmailWrapper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/FieldValidator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/FileHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/FrontEndLibrary.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/GaeLogApi.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/GaeVersionApi.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/GoogleCloudStorageHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/HttpRequestHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/JsonUtils.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Logger.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/NationalityHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/SanitizationHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/StatusMessage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/StatusMessageColor.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/StringHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/TaskWrapper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Templates.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/ThreadHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/TimeHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Url.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/Version.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/common/util/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/api/EmailGenerator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/api/EmailSender.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/api/GateKeeper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/api/Logic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/api/TaskQueuer.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/api/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/backdoor/BackDoorLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/backdoor/BackDoorOperation.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/backdoor/BackDoorServlet.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/backdoor/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/AccountsLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/AdminEmailsLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/CommentsLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/CoursesLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/EmailSenderService.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/FeedbackQuestionsLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/FeedbackResponseCommentsLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/FeedbackResponsesLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/FeedbackSessionsLogic.java">
+<error line="592" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="616" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="649" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 8, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="674" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="697" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="731" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="752" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="773" severity="error" message="Distance between variable &apos;roster&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/InstructorsLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/JavamailService.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/MailgunService.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/MailjetService.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/ProfilesLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/SendgridService.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/StudentsLogic.java">
+<error line="539" severity="error" message="Distance between variable &apos;originalStudentAttributes&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/TaskQueuesLogic.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/logic/core/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/AccountsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/AdminEmailsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/CommentsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/CoursesDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/EntitiesDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/FeedbackQuestionsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/FeedbackResponseCommentsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/FeedbackResponsesDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/FeedbackSessionsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/InstructorsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/ProfilesDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/StudentsDb.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/api/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/Account.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/AdminEmail.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/Comment.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/Course.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/CourseStudent.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/FeedbackQuestion.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/FeedbackResponse.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/FeedbackResponseComment.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/FeedbackSession.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/Instructor.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/StudentProfile.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/entity/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/CommentSearchDocument.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/CommentSearchQuery.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/FeedbackResponseCommentSearchDocument.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/FeedbackResponseCommentSearchQuery.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/InstructorSearchDocument.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/InstructorSearchQuery.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/SearchDocument.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/SearchManager.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/SearchQuery.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/StudentSearchDocument.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/StudentSearchQuery.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/storage/search/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/AdminPrepareEmailAddressModeWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/AdminPrepareEmailGroupModeWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/AdminSendEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/AutomatedAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/AutomatedActionFactory.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/AutomatedServlet.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/CompileLogsAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackResponseAdjustmentWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionClosedRemindersAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionClosingRemindersAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionOpeningRemindersAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionPublishedEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionPublishedRemindersAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionRemindEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionRemindParticularUsersEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/FeedbackSessionUnpublishedEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/InstructorCourseJoinEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/PendingCommentClearedEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/SendEmailWorkerAction.java">
+<error line="37" severity="error" message="Distance between variable &apos;emailSenderName&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/StudentCourseJoinEmailWorkerAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/automated/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/Action.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/ActionFactory.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/ActionResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminAccountDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminAccountDetailsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminAccountManagementPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminActivityLogPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailComposePageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailComposeSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailComposeSendAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailCreateGroupReceiverListUploadUrlAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailCreateImageUploadUrlAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailDraftPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailGroupReceiverListUploadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailImageUploadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailLogPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailSentPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailTrashAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailTrashDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminEmailTrashPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminExceptionTestAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminHomePageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminInstructorAccountAddAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminSearchPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminSessionsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AdminStudentGoogleIdResetAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/AjaxResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/ControllerServlet.java">
+<error line="105" severity="error" message="Distance between variable &apos;requestUrl&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/CourseStatsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/CreateImageUploadUrlAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/EntityModifiedLogsServlet.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/FeedbackSessionStatsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/FeedbackSubmissionEditPageAction.java">
+<error line="39" severity="error" message="Distance between variable &apos;regKey&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="40" severity="error" message="Distance between variable &apos;email&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/FeedbackSubmissionEditSaveAction.java">
+<error line="300" severity="error" message="Distance between variable &apos;questionDetails&apos; declaration and its first usage is 14, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/FileDownloadResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/ImageResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/ImageUploadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCommentsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseAddAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseArchiveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseDetailsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseEditPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseEnrollPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseEnrollSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseInstructorAbstractAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseInstructorAddAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseInstructorDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseInstructorEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseJoinAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseJoinAuthenticatedAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseRemindAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseStudentDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseStudentDetailsEditPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseStudentDetailsEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseStudentDetailsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCourseStudentListDownloadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorCoursesPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorEditInstructorFeedbackPageAction.java">
+<error line="35" severity="error" message="Distance between variable &apos;moderatedQuestionId&apos; declaration and its first usage is 11, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorEditInstructorFeedbackSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorEditStudentFeedbackPageAction.java">
+<error line="47" severity="error" message="Distance between variable &apos;moderatedQuestionId&apos; declaration and its first usage is 11, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorEditStudentFeedbackSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackAddAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackCopyAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackEditCopyAction.java">
+<error line="25" severity="error" message="Distance between variable &apos;coursesIdToCopyTo&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackEditCopyPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackEditPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackPreviewAsInstructorAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackPreviewAsStudentAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackPublishAction.java">
+<error line="18" severity="error" message="Distance between variable &apos;nextUrl&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackQuestionAddAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackQuestionCopyAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackQuestionCopyPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackQuestionEditAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackQuestionVisibilityMessageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackRemindAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackRemindParticularStudentsAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackRemindParticularStudentsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackResponseCommentAddAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackResponseCommentDeleteAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackResponseCommentEditAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackResponseCommentsLoadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackResultsDownloadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackResultsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackSubmissionEditPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackSubmissionEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbackUnpublishAction.java">
+<error line="17" severity="error" message="Distance between variable &apos;nextUrl&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorFeedbacksPageAction.java">
+<error line="25" severity="error" message="Distance between variable &apos;feedbackSessionToHighlight&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorHomePageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorSearchPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentCommentAddAction.java">
+<error line="144" severity="error" message="Distance between variable &apos;showCommentTo&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="145" severity="error" message="Distance between variable &apos;showGiverTo&apos; declaration and its first usage is 10, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="146" severity="error" message="Distance between variable &apos;showRecipientTo&apos; declaration and its first usage is 12, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="147" severity="error" message="Distance between variable &apos;commentText&apos; declaration and its first usage is 15, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentCommentClearPendingAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentCommentEditAction.java">
+<error line="135" severity="error" message="Distance between variable &apos;recipientType&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="136" severity="error" message="Distance between variable &apos;recipients&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="137" severity="error" message="Distance between variable &apos;showCommentTo&apos; declaration and its first usage is 9, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="138" severity="error" message="Distance between variable &apos;showGiverTo&apos; declaration and its first usage is 12, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="139" severity="error" message="Distance between variable &apos;showRecipientTo&apos; declaration and its first usage is 14, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="147" severity="error" message="Distance between variable &apos;commentText&apos; declaration and its first usage is 15, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentListAjaxPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentListPageAction.java">
+<error line="25" severity="error" message="Distance between variable &apos;searchKey&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentRecordsAjaxPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/InstructorStudentRecordsPageAction.java">
+<error line="48" severity="error" message="Distance between variable &apos;showCommentBox&apos; declaration and its first usage is 7, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="59" severity="error" message="Distance between variable &apos;giverEmailToGiverNameMap&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/LoginServlet.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/LogoutServlet.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/PublicImageServlet.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/RedirectResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/ShowPageResult.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentCommentsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentCourseDetailsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentCourseJoinAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentCourseJoinAuthenticatedAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentFeedbackResultsPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentFeedbackSubmissionEditPageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentFeedbackSubmissionEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentHomePageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentProfileCreateFormUrlAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentProfileEditSaveAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentProfilePageAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentProfilePictureAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentProfilePictureEditAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/StudentProfilePictureUploadAction.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/controller/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/datatransfer/InstructorFeedbackResultsPageViewType.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/datatransfer/InstructorStudentListPageCourseData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/datatransfer/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminAccountDetailsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminAccountManagementPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminActivityLogPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailComposePageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailDraftPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailLogPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailSentPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminEmailTrashPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminHomePageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminSearchPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminSessionsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/AdminStudentGoogleIdResetPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/CourseStatsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/CreateImageUploadUrlAjaxPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/FeedbackSessionStatsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/FeedbackSubmissionEditPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/FileUploadPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCommentsPageData.java">
+<error line="131" severity="error" message="Distance between variable &apos;isInstructorAllowedToModifyCommentInSection&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseDetailsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseEditPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseEnrollPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseEnrollResultPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseJoinConfirmationPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseStudentDetailsEditPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCourseStudentDetailsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorCoursesPageData.java">
+<error line="135" severity="error" message="Distance between variable &apos;archiveButton&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackEditCopyData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackEditCopyPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackEditPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackQuestionCopyPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackQuestionVisibilityMessagePageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackRemindParticularStudentsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackResponseCommentAjaxPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackResponseCommentsLoadPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbackResultsPageData.java">
+<error line="316" severity="error" message="Distance between variable &apos;responsesGroupedByTeam&apos; declaration and its first usage is 5, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorFeedbacksPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorHomeCourseAjaxPageData.java">
+<error line="66" severity="error" message="Distance between variable &apos;students&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="67" severity="error" message="Distance between variable &apos;sessions&apos; declaration and its first usage is 8, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="68" severity="error" message="Distance between variable &apos;instructors&apos; declaration and its first usage is 9, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="69" severity="error" message="Distance between variable &apos;courses&apos; declaration and its first usage is 10, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="78" severity="error" message="Distance between variable &apos;view&apos; declaration and its first usage is 6, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="83" severity="error" message="Distance between variable &apos;edit&apos; declaration and its first usage is 8, but allowed 4.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorHomePageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorSearchPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorStudentListAjaxPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorStudentListPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorStudentRecordsAjaxPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/InstructorStudentRecordsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/PageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentCommentsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentCourseDetailsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentCourseJoinConfirmationPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentFeedbackResultsPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentHomePageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentProfileCreateFormUrlAjaxPageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/StudentProfilePageData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/pagedata/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/ActiveCoursesTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/ActiveCoursesTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminAccountDetailsInstructorCourseListTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminAccountDetailsStudentCourseListTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminAccountManagementAccountTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminActivityLogTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminDraftEmailRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminDraftEmailTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminEmailActions.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminEmailTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminFeedbackSessionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminFilter.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSearchInstructorRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSearchInstructorTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSearchStudentFeedbackSession.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSearchStudentLinks.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSearchStudentRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSearchStudentTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSentEmailRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminSentEmailTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminTrashEmailActions.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminTrashEmailRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/AdminTrashEmailTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/ArchivedCoursesTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/ArchivedCoursesTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CommentRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CommentsForStudentsTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CourseEditFeedbackSessionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CourseEditInstructorPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CourseEditSectionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CoursePagination.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/CourseTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/ElementTag.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/EnrollResultPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackQuestionCopyTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackQuestionEditForm.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackQuestionFeedbackPathSettings.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackQuestionTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackQuestionVisibilitySettings.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResponseCommentRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResponsePersonRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResponseRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResultsQuestionDetails.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResultsResponse.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResultsResponseTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackResultsTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionPreviewForm.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionPublishButton.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionsAdditionalSettingsFormSegment.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionsCopyFromModal.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionsForm.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionsTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSessionsTableRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSubmissionEditQuestion.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/FeedbackSubmissionEditResponse.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/HomeFeedbackSessionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstitutionPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResponseComment.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsFilterPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsGroupByParticipantPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsGroupByQuestionPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsModerationButton.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsNoResponsePanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsParticipantPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsQuestionTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsResponsePanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsResponseRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsSecondaryParticipantPanelBody.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsSectionPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackResultsSessionPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorFeedbackSessionActions.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorHomeFeedbackSessionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorStudentListFilterBox.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorStudentListFilterCourse.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorStudentListSearchBox.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/InstructorStudentListStudentsTableCourse.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/QuestionTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/ResponseRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/SearchCommentsForResponsesTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/SearchStudentsTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentCourseDetailsPanel.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentFeedbackResultsQuestionWithResponses.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentFeedbackSessionActions.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentFeedbackSubmissionEditQuestionsWithResponses.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentHomeFeedbackSessionRow.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentInfoTable.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentListSectionData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentListStudentData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentListTeamData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentProfile.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentProfileEditBox.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/StudentProfileUploadPhotoModal.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/main/java/teammates/ui/template/package-info.java">
+</file>
+</checkstyle>

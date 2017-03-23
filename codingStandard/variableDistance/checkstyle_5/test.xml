@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.19">
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/BaseComponentTestCase.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/BaseTestCase.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/BaseTestCaseWithDatastoreAccess.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/ActionResultTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminAccountDeletePageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminAccountDetailsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminAccountManagementPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminActivityLogPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminExceptionTestActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminHomePageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminInstructorAccountAddActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AdminSearchPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/AllActionsAccessControlTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/BaseActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/FeedbackSessionStatsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCommentsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseAddActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 32, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseArchiveActionTest.java">
+<error line="24" severity="error" message="Distance between variable &apos;submissionParams&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseDeleteActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseDetailsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseEditPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseEditSaveActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;statusMessage&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="32" severity="error" message="Distance between variable &apos;courseEditSaveAction&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="33" severity="error" message="Distance between variable &apos;redirectResult&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseEnrollPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseEnrollSaveActionTest.java">
+<error line="171" severity="error" message="Distance between variable &apos;invalidEmail&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseInstructorAddActionTest.java">
+<error line="34" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 35, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseInstructorDeleteActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 23, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseInstructorEditSaveActionTest.java">
+<error line="34" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 22, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseJoinActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseJoinAuthenticatedActionTest.java">
+<error line="145" severity="error" message="Distance between variable &apos;currentLoginId&apos; declaration and its first usage is 12, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseRemindActionTest.java">
+<error line="37" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 25, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseStudentDeleteActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseStudentDetailsEditPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseStudentDetailsEditSaveActionTest.java">
+<error line="39" severity="error" message="Distance between variable &apos;newStudentEmail&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="40" severity="error" message="Distance between variable &apos;newStudentTeam&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="41" severity="error" message="Distance between variable &apos;newStudentComments&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseStudentDetailsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCourseStudentListDownloadActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorCoursesPageActionTest.java">
+<error line="32" severity="error" message="Distance between variable &apos;instructor1ofCourse1&apos; declaration and its first usage is 15, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorEditInstructorFeedbackPageActionTest.java">
+<error line="35" severity="error" message="Distance between variable &apos;showPageResult&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorEditInstructorFeedbackSaveActionTest.java">
+<error line="243" severity="error" message="Distance between variable &apos;redirectResult&apos; declaration and its first usage is 19, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="244" severity="error" message="Distance between variable &apos;moderatedInstructorEmail&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="245" severity="error" message="Distance between variable &apos;submissionParams&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="316" severity="error" message="Distance between variable &apos;frDb&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="321" severity="error" message="Distance between variable &apos;moderatedInstructorEmail&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="322" severity="error" message="Distance between variable &apos;submissionParams&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorEditStudentFeedbackPageActionTest.java">
+<error line="36" severity="error" message="Distance between variable &apos;idOfInstructorHelper&apos; declaration and its first usage is 32, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorEditStudentFeedbackSaveActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackAddActionTest.java">
+<error line="31" severity="error" message="Distance between variable &apos;teammatesLog&apos; declaration and its first usage is 24, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackCopyActionTest.java">
+<error line="55" severity="error" message="Distance between variable &apos;teammatesLogMessage&apos; declaration and its first usage is 24, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackDeleteActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackEditCopyActionTest.java">
+<error line="38" severity="error" message="Distance between variable &apos;course&apos; declaration and its first usage is 25, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackEditCopyPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackEditPageActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;expectedString&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackEditSaveActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;expectedString&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackPreviewAsInstructorActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;idOfInstructor2&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="31" severity="error" message="Distance between variable &apos;idOfInstructorHelper&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackPreviewAsStudentActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;idOfInstructorHelper&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackPublishActionTest.java">
+<error line="37" severity="error" message="Distance between variable &apos;paramsWithNullCourseId&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="41" severity="error" message="Distance between variable &apos;paramsWithNullFeedbackSessionName&apos; declaration and its first usage is 15, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackQuestionAddActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackQuestionCopyActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackQuestionCopyPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackQuestionEditActionTest.java">
+<error line="1301" severity="error" message="Distance between variable &apos;fqLogic&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackQuestionVisibilityMessageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackRemindActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackRemindParticularStudentsActionTest.java">
+<error line="28" severity="error" message="Distance between variable &apos;studentNotSubmitFeedback&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackRemindParticularStudentsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackResponseCommentAddActionTest.java">
+<error line="43" severity="error" message="Distance between variable &apos;response&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackResponseCommentDeleteActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackResponseCommentEditActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackResultsDownloadActionTest.java">
+<error line="36" severity="error" message="Distance between variable &apos;paramsNormalWithinSection&apos; declaration and its first usage is 21, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="49" severity="error" message="Distance between variable &apos;paramsWithFilterText&apos; declaration and its first usage is 34, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="55" severity="error" message="Distance between variable &apos;paramsWithMissingResponsesShown&apos; declaration and its first usage is 43, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="62" severity="error" message="Distance between variable &apos;paramsWithMissingResponsesHidden&apos; declaration and its first usage is 52, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackResultsPageActionTest.java">
+<error line="31" severity="error" message="Distance between variable &apos;paramsWithSortTypeQuestion&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="36" severity="error" message="Distance between variable &apos;paramsWithSortTypeGiverRecipientQuestion&apos; declaration and its first usage is 15, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="41" severity="error" message="Distance between variable &apos;paramsWithSortTypeRecipientGiverQuestion&apos; declaration and its first usage is 21, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="46" severity="error" message="Distance between variable &apos;paramsWithSortTypeGiverQuestionRecipient&apos; declaration and its first usage is 27, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="51" severity="error" message="Distance between variable &apos;paramsWithSortTypeRecipientQuestionGiver&apos; declaration and its first usage is 33, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="56" severity="error" message="Distance between variable &apos;paramsWithSortTypeUndefined&apos; declaration and its first usage is 39, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="61" severity="error" message="Distance between variable &apos;paramsNeedAjax&apos; declaration and its first usage is 51, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="67" severity="error" message="Distance between variable &apos;paramsWithStartIndex&apos; declaration and its first usage is 45, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="73" severity="error" message="Distance between variable &apos;paramsQuestionNumberOne&apos; declaration and its first usage is 57, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="79" severity="error" message="Distance between variable &apos;paramsSectionOneByQuestion&apos; declaration and its first usage is 63, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="85" severity="error" message="Distance between variable &apos;paramsSectionOneByGrq&apos; declaration and its first usage is 69, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="91" severity="error" message="Distance between variable &apos;paramsSectionOneByRgq&apos; declaration and its first usage is 75, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="97" severity="error" message="Distance between variable &apos;paramsNeedHtmlTableAllSections&apos; declaration and its first usage is 81, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="103" severity="error" message="Distance between variable &apos;paramsNeedHtmlTableSectionOne&apos; declaration and its first usage is 86, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackSubmissionEditPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackSubmissionEditSaveActionTest.java">
+<error line="419" severity="error" message="Distance between variable &apos;fqd&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="560" severity="error" message="Distance between variable &apos;submissionParams&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbackUnpublishActionTest.java">
+<error line="37" severity="error" message="Distance between variable &apos;paramsWithNullCourseId&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="40" severity="error" message="Distance between variable &apos;paramsWithNullFeedbackSessionName&apos; declaration and its first usage is 15, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorFeedbacksPageActionTest.java">
+<error line="28" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 31, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="31" severity="error" message="Distance between variable &apos;instructor1ofCourse1&apos; declaration and its first usage is 15, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorHomePageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorStudentCommentAddActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorStudentCommentEditActionTest.java">
+<error line="32" severity="error" message="Distance between variable &apos;anotherInstructor&apos; declaration and its first usage is 56, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="34" severity="error" message="Distance between variable &apos;anotherStudent&apos; declaration and its first usage is 56, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorStudentListAjaxPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorStudentListPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorStudentRecordsAjaxPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/InstructorStudentRecordsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentCommentsPageActionTest.java">
+<error line="31" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentCourseDetailsPageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentCourseJoinActionTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;joinAction&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="31" severity="error" message="Distance between variable &apos;redirectResult&apos; declaration and its first usage is 18, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="32" severity="error" message="Distance between variable &apos;submissionParams&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentCourseJoinAuthenticatedActionTest.java">
+<error line="38" severity="error" message="Distance between variable &apos;accountsDb&apos; declaration and its first usage is 13, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentFeedbackResultsPageActionTest.java">
+<error line="34" severity="error" message="Distance between variable &apos;emptySession&apos; declaration and its first usage is 23, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="35" severity="error" message="Distance between variable &apos;closedSession&apos; declaration and its first usage is 33, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="36" severity="error" message="Distance between variable &apos;gracePeriodSession&apos; declaration and its first usage is 29, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentFeedbackSubmissionEditPageActionTest.java">
+<error line="38" severity="error" message="Distance between variable &apos;unregStudent&apos; declaration and its first usage is 26, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentFeedbackSubmissionEditSaveActionTest.java">
+<error line="475" severity="error" message="Distance between variable &apos;fqd&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="765" severity="error" message="Distance between variable &apos;unregisteredStudent&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="870" severity="error" message="Distance between variable &apos;submissionParams&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentHomePageActionTest.java">
+<error line="35" severity="error" message="Distance between variable &apos;studentId&apos; declaration and its first usage is 30, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="36" severity="error" message="Distance between variable &apos;adminUserId&apos; declaration and its first usage is 29, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentProfileCreateFormUrlActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentProfileEditSaveActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentProfilePageActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentProfilePictureActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/StudentProfilePictureEditActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/action/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/BaseAutomatedActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackResponseAdjustmentWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionClosedRemindersActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionClosingRemindersActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionOpeningRemindersActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionPublishedEmailWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionPublishedRemindersActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionRemindEmailWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionRemindParticularUsersEmailWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/FeedbackSessionUnpublishedEmailWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/InstructorCourseJoinEmailWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/StudentCourseJoinEmailWorkerActionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/automated/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminAccountDetailsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminAccountManagementPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminActivityLogPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminEmailLogPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminEmailPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminHomePageUiTest.java">
+<error line="75" severity="error" message="Distance between variable &apos;shortName&apos; declaration and its first usage is 28, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="110" severity="error" message="Distance between variable &apos;shortNameDangerous&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminSearchPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AdminSessionsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AllAccessControlUiTests.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AllJsTests.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AppPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/AutomatedSessionRemindersTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/BaseUiTestCase.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackConstSumOptionQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackConstSumRecipientQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackContributionQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackMcqQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackMsqQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackNumScaleQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackRankQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/FeedbackRubricQuestionUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/GodModeTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCommentsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCourseDetailsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCourseEditPageUiTest.java">
+<error line="542" severity="error" message="Distance between variable &apos;sessionToCheck&apos; declaration and its first usage is 19, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCourseEnrollPageUiTest.java">
+<error line="60" severity="error" message="Distance between variable &apos;courseId&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCourseJoinConfirmationPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCourseStudentDetailsEditPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCourseStudentDetailsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorCoursesPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorEditStudentFeedbackPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorFeedbackEditCopyUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorFeedbackEditPageUiTest.java">
+<error line="484" severity="error" message="Distance between variable &apos;originalSecondQuestionNumber&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="523" severity="error" message="Distance between variable &apos;numQuestionEditForms&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorFeedbackPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorFeedbackResultsPageUiTest.java">
+<error line="103" severity="error" message="Distance between variable &apos;firstQuestionFromDatastore&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorFeedbackSubmitPageUiTest.java">
+<error line="120" severity="error" message="Distance between variable &apos;fqConstSum&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="122" severity="error" message="Distance between variable &apos;fqConstSum2&apos; declaration and its first usage is 76, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorHomePageUiTest.java">
+<error line="98" severity="error" message="Distance between variable &apos;currentValidUrl&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorSearchPageUiTest.java">
+<error line="59" severity="error" message="Distance between variable &apos;instructorId&apos; declaration and its first usage is 29, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorStudentListPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorStudentRecordsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/InstructorSubmissionAdjustmentUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/MashupPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentCommentsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentCourseDetailsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentCourseJoinConfirmationPageUiTest.java">
+<error line="57" severity="error" message="Distance between variable &apos;expectedMsg&apos; declaration and its first usage is 30, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="58" severity="error" message="Distance between variable &apos;homePageActionUrl&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="149" severity="error" message="Distance between variable &apos;expectedMsg&apos; declaration and its first usage is 30, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="150" severity="error" message="Distance between variable &apos;homePageActionUrl&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentFeedbackResultsPageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentFeedbackSubmitPageUiTest.java">
+<error line="185" severity="error" message="Distance between variable &apos;fqConstSum&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="187" severity="error" message="Distance between variable &apos;fqConstSum2&apos; declaration and its first usage is 71, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="189" severity="error" message="Distance between variable &apos;fqContrib&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentHomePageUiTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/StudentProfilePageUiTest.java">
+<error line="115" severity="error" message="Distance between variable &apos;studentGoogleId&apos; declaration and its first usage is 27, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="219" severity="error" message="Distance between variable &apos;instructorId&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="220" severity="error" message="Distance between variable &apos;helperId&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="228" severity="error" message="Distance between variable &apos;invalidEmail&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/SystemErrorEmailReportTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/TableSortTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/TimezoneSyncerTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/browsertests/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/AccountAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/CommentAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/CourseAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/CourseRosterTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/FeedbackQuestionAttributesTest.java">
+<error line="206" severity="error" message="Distance between variable &apos;participants&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/FeedbackResponseAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/FeedbackResponseDetailsTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/FeedbackSessionAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/InstructorAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/InstructorFeedbackResultsResponseRowTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/InstructorPrivilegesTest.java">
+<error line="373" severity="error" message="Distance between variable &apos;sectionId2&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/SessionAttributesTest.java">
+<error line="21" severity="error" message="Distance between variable &apos;expected&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/StudentAttributesFactoryTest.java">
+<error line="96" severity="error" message="Distance between variable &apos;studentCreated&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/StudentAttributesTest.java">
+<error line="67" severity="error" message="Distance between variable &apos;courseId&apos; declaration and its first usage is 22, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="68" severity="error" message="Distance between variable &apos;invalidStudent&apos; declaration and its first usage is 14, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/StudentProfileAttributesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/TeamEvalResultTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/datatransfer/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/AccountsLogicTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/BackDoorLogicTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/BaseLogicTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/CommentsLogicTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/CoursesLogicTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/EmailGeneratorTest.java">
+<error line="58" severity="error" message="Distance between variable &apos;students&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="59" severity="error" message="Distance between variable &apos;instructors&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/EmailSenderTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/FeedbackQuestionsLogicTest.java">
+<error line="119" severity="error" message="Distance between variable &apos;expectedList&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="205" severity="error" message="Distance between variable &apos;expectedList&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="434" severity="error" message="Distance between variable &apos;actualQuestions&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="435" severity="error" message="Distance between variable &apos;allQuestions&apos; declaration and its first usage is 33, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="523" severity="error" message="Distance between variable &apos;allQuestions&apos; declaration and its first usage is 14, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/FeedbackResponseCommentsLogicTest.java">
+<error line="111" severity="error" message="Distance between variable &apos;expectedFrComments&apos; declaration and its first usage is 31, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/FeedbackResponsesLogicTest.java">
+<error line="518" severity="error" message="Distance between variable &apos;student2&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="519" severity="error" message="Distance between variable &apos;student3&apos; declaration and its first usage is 13, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="520" severity="error" message="Distance between variable &apos;student5&apos; declaration and its first usage is 28, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/FeedbackSessionsLogicTest.java">
+<error line="106" severity="error" message="Distance between variable &apos;sessionWithoutStudents&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="1997" severity="error" message="Distance between variable &apos;student3OfCourse1&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/GateKeeperTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/InstructorsLogicTest.java">
+<error line="672" severity="error" message="Distance between variable &apos;instructors&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/ProfilesLogicTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/StudentsLogicTest.java">
+<error line="255" severity="error" message="Distance between variable &apos;originalEmail&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="334" severity="error" message="Distance between variable &apos;student2InCourse1&apos; declaration and its first usage is 14, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="411" severity="error" message="Distance between variable &apos;info&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="416" severity="error" message="Distance between variable &apos;expectedInvalidInfoString&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/logic/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/AdminHomePageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/FeedbackSubmissionEditPageDataTest.java">
+<error line="40" severity="error" message="Distance between variable &apos;feedbackSession&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="169" severity="error" message="Distance between variable &apos;instructor&apos; declaration and its first usage is 27, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCommentsPageDataTest.java">
+<error line="89" severity="error" message="Distance between variable &apos;commentRows&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseDetailsPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseEditPageDataTest.java">
+<error line="28" severity="error" message="Distance between variable &apos;account&apos; declaration and its first usage is 13, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="29" severity="error" message="Distance between variable &apos;course&apos; declaration and its first usage is 13, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="37" severity="error" message="Distance between variable &apos;currentInstructor&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="39" severity="error" message="Distance between variable &apos;offset&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseEnrollPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseEnrollResultPageDataTest.java">
+<error line="24" severity="error" message="Distance between variable &apos;account&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="25" severity="error" message="Distance between variable &apos;courseId&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseJoinConfirmationPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseStudentDetailsEditPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCourseStudentDetailsPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorCoursesPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorFeedbackEditPageDataTest.java">
+<error line="45" severity="error" message="Distance between variable &apos;data&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="47" severity="error" message="Distance between variable &apos;fs&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorFeedbackQuestionCopyPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorFeedbacksPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorStudentListAjaxPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/InstructorStudentListPageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/StudentCommentsPageDataTest.java">
+<error line="166" severity="error" message="Distance between variable &apos;session&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="169" severity="error" message="Distance between variable &apos;responses&apos; declaration and its first usage is 10, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="177" severity="error" message="Distance between variable &apos;sectionTeamNameTable&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="179" severity="error" message="Distance between variable &apos;responseComments&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="216" severity="error" message="Distance between variable &apos;expectedActiveCourse&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/StudentCourseDetailsPageDataTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;pageData&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="35" severity="error" message="Distance between variable &apos;courseDetails&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/StudentFeedbackResultsPageDataTest.java">
+<error line="43" severity="error" message="Distance between variable &apos;logic&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="45" severity="error" message="Distance between variable &apos;pageData&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/StudentHomePageDataTest.java">
+<error line="142" severity="error" message="Distance between variable &apos;course1&apos; declaration and its first usage is 27, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="143" severity="error" message="Distance between variable &apos;course2&apos; declaration and its first usage is 27, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/StudentProfilePageDataTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/pagedata/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/search/BaseSearchTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/search/CommentSearchTest.java">
+<error line="30" severity="error" message="Distance between variable &apos;ins3InCourse1&apos; declaration and its first usage is 14, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="31" severity="error" message="Distance between variable &apos;ins1InCourse2&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="32" severity="error" message="Distance between variable &apos;ins2InCourse2&apos; declaration and its first usage is 34, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="33" severity="error" message="Distance between variable &apos;comment1FromI1C1toS1C1&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="34" severity="error" message="Distance between variable &apos;comment2FromI1C1toS1C1&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="35" severity="error" message="Distance between variable &apos;comment1FromI3C1toS2C1&apos; declaration and its first usage is 28, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="36" severity="error" message="Distance between variable &apos;comment1FromI1C2toS1C2&apos; declaration and its first usage is 15, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="37" severity="error" message="Distance between variable &apos;comment1FromI1C1toT11C1&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="38" severity="error" message="Distance between variable &apos;comment1FromI1C1toSE1C1&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="39" severity="error" message="Distance between variable &apos;comment1FromI1C1toC1&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="40" severity="error" message="Distance between variable &apos;comment1FromI3C1toC1&apos; declaration and its first usage is 28, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/search/InstructorSearchTest.java">
+<error line="24" severity="error" message="Distance between variable &apos;ins1InCourse1&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="25" severity="error" message="Distance between variable &apos;ins2InCourse1&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="26" severity="error" message="Distance between variable &apos;helperInCourse1&apos; declaration and its first usage is 35, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="27" severity="error" message="Distance between variable &apos;ins1InCourse2&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="28" severity="error" message="Distance between variable &apos;ins2InCourse2&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="29" severity="error" message="Distance between variable &apos;ins3InCourse2&apos; declaration and its first usage is 23, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="30" severity="error" message="Distance between variable &apos;insInArchivedCourse&apos; declaration and its first usage is 14, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="31" severity="error" message="Distance between variable &apos;insInUnregCourse&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/search/StudentSearchTest.java">
+<error line="28" severity="error" message="Distance between variable &apos;stu1InCourse1&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="29" severity="error" message="Distance between variable &apos;stu2InCourse1&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="30" severity="error" message="Distance between variable &apos;stu1InCourse2&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="31" severity="error" message="Distance between variable &apos;stu2InCourse2&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="32" severity="error" message="Distance between variable &apos;stu1InUnregCourse&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="33" severity="error" message="Distance between variable &apos;stu2InUnregCourse&apos; declaration and its first usage is 11, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="34" severity="error" message="Distance between variable &apos;stu1InArchCourse&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/search/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/AccountsDbTest.java">
+<error line="198" severity="error" message="Distance between variable &apos;expectedModifiedDate&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="200" severity="error" message="Distance between variable &apos;expectedNationality&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/CommentsDbTest.java">
+<error line="220" severity="error" message="Distance between variable &apos;courseId2&apos; declaration and its first usage is 7, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="222" severity="error" message="Distance between variable &apos;giverEmail2&apos; declaration and its first usage is 25, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="223" severity="error" message="Distance between variable &apos;giverEmailNew&apos; declaration and its first usage is 16, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="224" severity="error" message="Distance between variable &apos;recipientEmail1&apos; declaration and its first usage is 13, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="225" severity="error" message="Distance between variable &apos;recipientEmail2&apos; declaration and its first usage is 31, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="341" severity="error" message="Distance between variable &apos;instr2&apos; declaration and its first usage is 8, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="345" severity="error" message="Distance between variable &apos;courseId2&apos; declaration and its first usage is 27, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="346" severity="error" message="Distance between variable &apos;instr3&apos; declaration and its first usage is 14, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="347" severity="error" message="Distance between variable &apos;student3&apos; declaration and its first usage is 9, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="348" severity="error" message="Distance between variable &apos;team1&apos; declaration and its first usage is 13, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="349" severity="error" message="Distance between variable &apos;team2&apos; declaration and its first usage is 17, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="350" severity="error" message="Distance between variable &apos;section1&apos; declaration and its first usage is 21, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+<error line="351" severity="error" message="Distance between variable &apos;section2&apos; declaration and its first usage is 24, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/CoursesDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/EntitiesDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/FeedbackQuestionsDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/FeedbackResponseCommentsDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/FeedbackResponsesDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/FeedbackSessionsDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/InstructorsDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/ProfilesDbTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/StudentsDbTest.java">
+<error line="231" severity="error" message="Distance between variable &apos;originalEmail&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/storage/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/AssertHelperTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/BackDoorTest.java">
+<error line="257" severity="error" message="Distance between variable &apos;student&apos; declaration and its first usage is 6, but allowed 5.  Consider to make that variable as final if you still need to store its value in advance (before method calls that might do side effect on original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/EmailCheckerTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/HtmlHelperTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/TestNgTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/TestPropertiesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/testdriver/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/ActivityLogEntryTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/AdminLogQueryTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/BuildPropertiesTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/EmailLogEntryTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/FieldValidatorTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/SanitizationHelperTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/StringHelperTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/TimeHelperTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/UrlTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/VersionTest.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/cases/util/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/AssertHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/BackDoor.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/EmailAccount.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/EmailChecker.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/FileHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/GaeSimulation.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/HtmlHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/MockEmailSender.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/MockTaskQueuer.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/Priority.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/PriorityInterceptor.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/TestProperties.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/driver/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminAccountDetailsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminAccountManagementPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminActivityLogPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminEmailLogPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminEmailPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminHomePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminSearchPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AdminSessionsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/AppPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/Browser.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/BrowserPool.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/DevServerLoginPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/EntityNotFoundPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/FeedbackSessionNotVisiblePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/FeedbackSubmitPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/GenericAppPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/GoogleLoginPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/HomePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCommentsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCopyFsToModal.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseDetailsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseEditPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseEnrollPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseEnrollResultPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseJoinConfirmationPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseStudentDetailsEditPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCourseStudentDetailsViewPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCoursesDetailsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorCoursesPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorEditStudentFeedbackPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorFeedbackEditPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorFeedbackResultsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorFeedbacksPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorHelpPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorHomePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorSearchPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorStudentListPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/InstructorStudentRecordsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/LoginPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/NotAuthorizedPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/NotFoundPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/QUnitPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentCommentsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentCourseDetailsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentCourseJoinConfirmationPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentFeedbackResultsPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentHelpPage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentHomePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentProfilePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/StudentProfilePicturePage.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/test/java/teammates/test/pageobjects/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/remoteapi/RemoteApiClient.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/remoteapi/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/AddSectionsToLargeCourses.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/AdminEmailListGenerator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataBundleRegenerator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataGenerator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationAppendInstitutionForAccounts.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForComments.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForInstructorsCourseArchiving.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForIsArchivedAttribute.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForResponseRate.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForSanitizedDataInAdminEmailAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForSanitizedDataInStudentAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForSearchableComments.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForSearchableInstructors.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForSearchableStudents.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForSentClosingEmailFieldInSessions.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataMigrationForTimezoneFieldInCourses.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DataRepairForCorruptedResponses.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/DownloadAllCourseData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/GenerateEmailsOfInstructors.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/GenerateFeedbackReport.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/GenerateLargeScaledData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/ImportData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/InstructorEntityViewer.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/InstructorStudentInstitueMigrator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/ModifyInstituteOfStudentsInCourse.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/OfflineBackup.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/ParallelProfiler.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/PerformanceProfiler.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/RepairFeedbackSessionNameWithExtraWhiteSpace.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/RepairFeedbackSessionResponseRate.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/RepairStudentsWithDuplicateEmail.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/RepairTeamNameInStudentResponseAndCommentAttributes.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/StatisticsPerInstitute.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/StudentDataGenerator.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/TeamEvalResultCalculations.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/UploadBackupData.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/package-info.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/util/DataMigrationForSanitizedDataHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/util/LoopHelper.java">
+</file>
+<file name="/Users/XP/Documents/teammates-git/src/client/java/teammates/client/scripts/util/package-info.java">
+</file>
+</checkstyle>
