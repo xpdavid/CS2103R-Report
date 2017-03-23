@@ -96,6 +96,10 @@ However, there some valid violations. For example, in production code, it is not
 
 ##### Comments Indentation
 
+According to the coding standard, comments should be indented relative to their position in the code. There is a rule in checkstyle `CommentsIndentation`, which will control the indentation between comments and surrounding code.
+
+The rule is enforced in [#6814](https://github.com/TEAMMATES/teammates/pull/6814).
+
 ##### Spelling of word
 
 #### Design Principle
