@@ -106,6 +106,16 @@ The rule is enforced in [#6814](https://github.com/TEAMMATES/teammates/pull/6814
 
 ##### API Design
 
+One of the principle in designing API is to hide the internal implementation to user. In other word, we should avoid using implementation types and use the interface instead. There is a pmd rule for this `LooseCoupling`. This rule can be applied to TEAMMATES production code.
+
+[Here](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/designPrinciple/apiDesign/main.html) is the violation report for `pmdMain`.
+
+One of them is shown below (From `Logic.java`).
+
+![Image](designPrinciple/apiDesign/violation.png)
+
+It would be a good practice to change `HashMap<String, CourseSummaryBundle>` to `Map<String, CourseSummaryBundle>`.
+
 ##### Abstraction Level
 
 #### Bug Prevention
