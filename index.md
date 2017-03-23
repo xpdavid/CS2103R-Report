@@ -100,6 +100,9 @@ According to the coding standard, comments should be indented relative to their 
 
 The rule is enforced in [#6814](https://github.com/TEAMMATES/teammates/pull/6814).
 
+Sample violation:
+![Image](codingStandard/commentsIndentation/violation.png)
+
 ##### Spelling of word
 
 #### Design Principle
