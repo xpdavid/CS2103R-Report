@@ -175,6 +175,54 @@ It would be a good practice to change `HashMap<String, CourseSummaryBundle>` to 
 
 ##### Abstraction Level
 
+According to the [design](https://github.com/TEAMMATES/teammates/blob/master/docs/design.md#architecture) of our project, there are several abstraction level (components) and some components should not touch each other. Currently, only two rule is forced and we use `macker` to check dependency.
+
+``` xml
+<ruleset name="Test cases should not be dependent on each other" />
+<ruleset name="Only UI tests can access page object classes" />
+``` 
+
+checkstyle has one rule called `ImportControl` (as indicated in its name, we can make certain constrain for the import of certain class), however, it turns out that it is not as powerful as macker. The following discussion will propose new rules for macker. 
+
+We will examine the design one by one.
+
+![Image](designPrinciple/abstraction/packageDiagram.png)
+
+- The UI should not touch Storage directly
+- The Logic should not touch UI
+- The Storage should not touch Logic
+- The Storage should not touch UI
+- Client should not touch UI (This diagram need to be updated as Client can touch storage and logic)
+- client::remoteapi can be only access by client::scripts
+- client::util should only be used inside client (This diagram need to be updated to show client::util)
+
+![Image](designPrinciple/abstraction/UiComponent.png)
+
+- Only `*Action` in can touch logic (especially `Logic.java` as Facade class)
+- `*PageData` is only used in `*Action` and `ActionResult`
+- `*Action` can only be created by `*ActionFactory`
+- `ActionResult` can only be created by `*Action`
+
+![Image](designPrinciple/abstraction/LogicComponent.png)
+
+- Each logic can only access its corresponding DB (e.g. AccountsLogic -> AccountsDb)
+- BackDoorServlet should only access BackDoorLogic, not logic:core
+
+![Image](designPrinciple/abstraction/StorageComponent.png)
+
+- storage::entity should only be accessed by storage::api and common:datatransfer
+- storage::search should only be accessed by storage::api
+
+![Image](designPrinciple/abstraction/TestDriverComponent.png)
+
+- Test cases should not be dependent on each other (already there)
+- Only browser tests tests can access page object classes (already there)
+- The Test Driver should be only used in test cases
+- util and browsertest cannot access GaeSimulation
+- action test cases should only interact with back-end through BackDoor API (The rule should be there, but there are too many violations)
+
+The rule in macker `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/additional-macker/static-analysis/teammates-macker.xml).
+
 #### Bug Prevention
 
 ##### Findbugs Enforcement
