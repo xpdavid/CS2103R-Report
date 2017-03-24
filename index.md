@@ -312,4 +312,30 @@ Note that we use `filter` to suppress some bugs in findBugs. [Here](https://gith
 
 ### Analysis
 
+Through the above discussion, we can see that some rules are worth to enforce, while some rules require a lot of efforts to enforce them. We will looks at them individually. 
+
+#### Coding Standard
+
+- It **not** worth to force the rule for boolean variable naming conversion. The intention of the coding standard is to make code more readable. But the rule just simply say if is doesn't start with certain prefixes, the checks will fails. There are many case that a boolean variable doesn't start with `is`(and so on) but makes sense. However, we can keep the checks and run it frequently to check new violation introduce in PR.
+
+- It **worth** to force the variable declaration usage distance rule for **production** code. By doing this, the code would become more readable as the developers don't need to remember declared variable name. However, we could exclude this rule for test cases as sometimes we want to declare all test data at the beginning.
+
+- The comments Indentation rule is already forced in current production code.
+
+- It **not** worth to force the spelling of words rule in our project. The reason is obviously as the maintenance would be a nightmare. We invent new word everyday, isn't it. However, this check could be run frequently (or to PR) to check whether there are typos or not.
+
+#### Design Principle
+
+- It **worth** to enforce the pmd rule `LooseCoupling`, which could make our API more flexible and I believe "avoid using implementation types and use the interface instead" is one of rule in API design.
+
+- It **worth** to enforce the new rule added to `macker` to check any design flaws. It will help us to prevent from breaking the design accidently.
+
+##### Bug Prevention
+
+- It **worth** to enforce the `Findbug` plugins in our build process **with** suppression. FindBug is more powerful than checkstyle and pmd. We now also have the ability to print violation through console.
+
 ### Conclusion
+
+In conclusion, it worth to enforce most of the rule above in our project. In addition, the rule I explored can also be an option to find potential stylistic flaws, but we need man-power to maintain it.
+
+We are almost done with static analysis tools (at least with `checkstyle`, `findbugs`, `macker` and `pmd`), further exploration could be to make this process more automatic. For example, we can have PR-bot to comment violations. Also, for the spelling rule I have introduce or the boolean variable naming, the PR-bot could make comment it the PR but not necessary to make the build fail.
