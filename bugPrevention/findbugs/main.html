@@ -1,0 +1,3066 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/AccountAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/AdminEmailAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CommentAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CommentAttributes$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CommentAttributes$3.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CommentAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CourseAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CourseAttributes$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/CourseAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/EntityAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackQuestionAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackQuestionAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackResponseAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackResponseAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackResponseCommentAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackResponseCommentAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackSessionAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackSessionAttributes$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/FeedbackSessionAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/InstructorAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/SessionAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/SessionAttributes$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/SessionAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/StudentAttributes$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/StudentAttributes$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/StudentAttributes$3.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/StudentAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/attributes/StudentProfileAttributes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CommentParticipantType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CommentSearchResultBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CommentSendingState.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CommentStatus.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseDetailsBundle$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseDetailsBundle$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseDetailsBundle$3.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseDetailsBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseEnrollmentResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseRoster.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseStats.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseSummaryBundle$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseSummaryBundle$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseSummaryBundle$3.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseSummaryBundle$4.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/CourseSummaryBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/DataBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackParticipantType$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackParticipantType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackResponseCommentSearchResultBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionDetailsBundle$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionDetailsBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionQuestionsBundle$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionQuestionsBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResponseStatus$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResponseStatus$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResponseStatus$3.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResponseStatus.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$10.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$11.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$12.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$13.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$3.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$4.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$5.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$6.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$7.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$8.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle$9.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionResultsBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionStats.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/FeedbackSessionType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/InstructorPrivileges.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/InstructorSearchResultBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackConstantSumQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackConstantSumResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackContributionQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackContributionResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackMcqQuestionDetails$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackMcqQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackMcqResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackMsqQuestionDetails$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackMsqQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackMsqResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackNumericalScaleQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackNumericalScaleResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackQuestionType$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackQuestionType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankOptionsQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankOptionsResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankRecipientsQuestionDetails$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankRecipientsQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankRecipientsResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRankResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRubricQuestionDetails$RubricStatistics.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRubricQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackRubricResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackTextQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/questions/FeedbackTextResponseDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/SearchResultBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/SectionDetailsBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/StudentAttributesFactory.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/StudentEnrollDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/StudentResultSummary.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/StudentSearchResultBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/StudentUpdateStatus.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/TeamDetailsBundle.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/TeamEvalResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/UserRole.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/datatransfer/UserType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/EmailSendingException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/EnrollException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/EntityAlreadyExistsException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/EntityDoesNotExistException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/EntityNotFoundException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/ExceedingRangeException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/FeedbackSessionNotVisibleException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/InvalidParametersException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/JoinCourseException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/NullPostParameterException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/PageNotFoundException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/TeammatesException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/exception/UnauthorizedAccessException.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Activity.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/ActivityLogEntry.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/AdminLogQuery.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/AppUrl.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Assumption.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Config.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$ActionURIs.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$ActivityLog.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$EmailLog.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$FeedbackQuestion.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$FeedbackQuestionTypeNames.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$FeedbackSessionResults.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$GenderTypes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$InstructorPermissionRoleNames.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$PageNames.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$ParamsNames.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$PlaceholderText.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$PublicActionNames.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$SearchDocumentField.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$SearchIndex.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$StatusCodes.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$StatusMessages.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$SystemParams.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$TaskQueue.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$Tooltips.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const$ViewURIs.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Const.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/EmailLogEntry.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/EmailType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/EmailWrapper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/FieldValidator.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/FileHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/FrontEndLibrary.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/GaeLogApi.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/GaeVersionApi.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/GoogleCloudStorageHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/HttpRequestHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/JsonUtils.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Logger.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/NationalityHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/SanitizationHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/StatusMessage.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/StatusMessageColor.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/StringHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/TaskWrapper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Templates$EmailTemplates.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Templates$FeedbackQuestion$FormTemplates.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Templates$FeedbackQuestion$Slots.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Templates$FeedbackQuestion.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Templates$FeedbackSessionTemplates.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Templates.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/ThreadHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/TimeHelper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Url.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/common/util/Version.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/api/EmailGenerator.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/api/EmailSender.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/api/GateKeeper.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/api/Logic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/api/TaskQueuer.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/backdoor/BackDoorLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/backdoor/BackDoorOperation.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/backdoor/BackDoorServlet$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/backdoor/BackDoorServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/AccountsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/AdminEmailsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/CommentsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/CoursesLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/EmailSenderService.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackQuestionsLogic$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackQuestionsLogic$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackQuestionsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackResponseCommentsLogic$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackResponseCommentsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackResponsesLogic$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackResponsesLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackSessionsLogic$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackSessionsLogic$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/FeedbackSessionsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/InstructorsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/JavamailService.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/MailgunService.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/MailjetService.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/ProfilesLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/SendgridService.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/StudentsLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/logic/core/TaskQueuesLogic.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/AccountsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/AdminEmailsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/CommentsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/CoursesDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/EntitiesDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/FeedbackQuestionsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/FeedbackResponseCommentsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/FeedbackResponsesDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/FeedbackSessionsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/InstructorsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/ProfilesDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/api/StudentsDb.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/Account.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/AdminEmail.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/Comment.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/Course.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/CourseStudent.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/FeedbackQuestion.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/FeedbackResponse.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/FeedbackResponseComment.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/FeedbackSession.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/Instructor.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/entity/StudentProfile.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/CommentSearchDocument$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/CommentSearchDocument.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/CommentSearchQuery.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/FeedbackResponseCommentSearchDocument.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/FeedbackResponseCommentSearchQuery.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/InstructorSearchDocument$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/InstructorSearchDocument.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/InstructorSearchQuery.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/SearchDocument.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/SearchManager.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/SearchQuery.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/StudentSearchDocument$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/StudentSearchDocument.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/storage/search/StudentSearchQuery.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/AdminPrepareEmailAddressModeWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/AdminPrepareEmailGroupModeWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/AdminSendEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/AutomatedAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/AutomatedActionFactory.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/AutomatedServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/CompileLogsAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackResponseAdjustmentWorkerAction$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackResponseAdjustmentWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionClosedRemindersAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionClosingRemindersAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionOpeningRemindersAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionPublishedEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionPublishedRemindersAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionRemindEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionRemindParticularUsersEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/FeedbackSessionUnpublishedEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/InstructorCourseJoinEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/PendingCommentClearedEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/SendEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/automated/StudentCourseJoinEmailWorkerAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/Action.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/ActionFactory.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/ActionResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminAccountDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminAccountDetailsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminAccountManagementPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminActivityLogPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailComposePageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailComposeSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailComposeSendAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailCreateGroupReceiverListUploadUrlAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailCreateImageUploadUrlAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailDraftPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailGroupReceiverListUploadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailImageUploadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailLogPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailSentPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailTrashAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailTrashDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminEmailTrashPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminExceptionTestAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminHomePageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminInstructorAccountAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminSearchPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminSessionsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AdminStudentGoogleIdResetAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/AjaxResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/ControllerServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/CourseStatsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/CreateImageUploadUrlAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/EntityModifiedLogsServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/FeedbackSessionStatsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/FeedbackSubmissionEditPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/FeedbackSubmissionEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/FileDownloadResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/ImageResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/ImageUploadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCommentsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseArchiveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseDetailsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseEditPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseEnrollPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseEnrollSaveAction$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseEnrollSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseInstructorAbstractAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseInstructorAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseInstructorDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseInstructorEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseJoinAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseJoinAuthenticatedAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseRemindAction$JoinEmailData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseRemindAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCoursesPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseStudentDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseStudentDetailsEditPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseStudentDetailsEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseStudentDetailsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorCourseStudentListDownloadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorEditInstructorFeedbackPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorEditInstructorFeedbackSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorEditStudentFeedbackPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorEditStudentFeedbackSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackAddAction$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackCopyAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackEditCopyAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackEditCopyPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackEditPageAction$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackEditPageAction$2.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackEditPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackPreviewAsInstructorAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackPreviewAsStudentAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackPublishAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackQuestionAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackQuestionCopyAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackQuestionCopyPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackQuestionEditAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackQuestionVisibilityMessageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackRemindAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackRemindParticularStudentsAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackRemindParticularStudentsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackResponseCommentAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackResponseCommentDeleteAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackResponseCommentEditAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackResponseCommentsLoadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackResultsDownloadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackResultsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbacksPageAction$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbacksPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackSubmissionEditPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackSubmissionEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorFeedbackUnpublishAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorHomePageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorSearchPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentCommentAddAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentCommentClearPendingAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentCommentEditAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentListAjaxPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentListPageAction$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentListPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentRecordsAjaxPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/InstructorStudentRecordsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/LoginServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/LogoutServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/PublicImageServlet.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/RedirectResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/ShowPageResult.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentCommentsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentCourseDetailsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentCourseJoinAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentCourseJoinAuthenticatedAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentFeedbackResultsPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentFeedbackSubmissionEditPageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentFeedbackSubmissionEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentHomePageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentProfileCreateFormUrlAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentProfileEditSaveAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentProfilePageAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentProfilePictureAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentProfilePictureEditAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/controller/StudentProfilePictureUploadAction.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/datatransfer/InstructorFeedbackResultsPageViewType$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/datatransfer/InstructorFeedbackResultsPageViewType.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/datatransfer/InstructorStudentListPageCourseData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminAccountDetailsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminAccountManagementPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminActivityLogPageData$QueryParameters.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminActivityLogPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailComposePageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailDraftPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailLogPageData$QueryParameters.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailLogPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailPageData$AdminEmailPageState.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailSentPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminEmailTrashPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminHomePageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminSearchPageData$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminSearchPageData$FeedbackSessionState.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminSearchPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminSessionsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/AdminStudentGoogleIdResetPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/CourseStatsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/CreateImageUploadUrlAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/FeedbackSessionStatsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/FeedbackSubmissionEditPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/FileUploadPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCommentsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseDetailsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseEditPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseEnrollPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseEnrollResultPageData$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseEnrollResultPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseJoinConfirmationPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCoursesPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseStudentDetailsEditPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorCourseStudentDetailsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackEditCopyData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackEditCopyPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackEditPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackQuestionCopyPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackQuestionVisibilityMessagePageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackRemindParticularStudentsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackResponseCommentAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackResponseCommentsLoadPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackResultsPageData$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbackResultsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorFeedbacksPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorHomeCourseAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorHomePageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorSearchPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorStudentListAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorStudentListPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorStudentRecordsAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/InstructorStudentRecordsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/PageData$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/PageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentCommentsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentCourseDetailsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentCourseJoinConfirmationPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentFeedbackResultsPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentHomePageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentProfileCreateFormUrlAjaxPageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/pagedata/StudentProfilePageData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/ActiveCoursesTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/ActiveCoursesTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminAccountDetailsInstructorCourseListTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminAccountDetailsStudentCourseListTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminAccountManagementAccountTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminActivityLogTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminDraftEmailRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminDraftEmailTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminEmailActions.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminEmailTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminFeedbackSessionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminFilter.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSearchInstructorRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSearchInstructorTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSearchStudentFeedbackSession.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSearchStudentLinks.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSearchStudentRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSearchStudentTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSentEmailRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminSentEmailTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminTrashEmailActions.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminTrashEmailRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/AdminTrashEmailTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/ArchivedCoursesTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/ArchivedCoursesTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CommentRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CommentsForStudentsTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CourseEditFeedbackSessionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CourseEditInstructorPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CourseEditSectionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CoursePagination.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/CourseTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/ElementTag.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/EnrollResultPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackQuestionCopyTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackQuestionEditForm.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackQuestionFeedbackPathSettings.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackQuestionTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackQuestionVisibilitySettings.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResponseCommentRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResponsePersonRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResponseRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResultsQuestionDetails.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResultsResponse.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResultsResponseTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackResultsTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionPreviewForm.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionPublishButton.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionsAdditionalSettingsFormSegment.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionsCopyFromModal.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionsForm.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionsTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSessionsTableRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSubmissionEditQuestion.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/FeedbackSubmissionEditResponse.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/HomeFeedbackSessionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstitutionPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResponseComment.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsFilterPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsGroupByParticipantPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsGroupByQuestionPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsModerationButton.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsNoResponsePanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsParticipantPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsQuestionTable$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsQuestionTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsResponsePanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsResponseRow$1.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsResponseRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsSecondaryParticipantPanelBody.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsSectionPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackResultsSessionPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorFeedbackSessionActions.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorHomeFeedbackSessionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorStudentListFilterBox.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorStudentListFilterCourse.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorStudentListSearchBox.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/InstructorStudentListStudentsTableCourse.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/QuestionTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/ResponseRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/SearchCommentsForResponsesTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/SearchStudentsTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentCourseDetailsPanel.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentFeedbackResultsQuestionWithResponses.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentFeedbackSessionActions.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentFeedbackSubmissionEditQuestionsWithResponses.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentHomeFeedbackSessionRow.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentInfoTable.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentListSectionData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentListStudentData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentListTeamData.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentProfile.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentProfileEditBox.class</li>
+<li>/Users/XP/Documents/teammates-git/build/classes/main/teammates/ui/template/StudentProfileUploadPhotoModal.class</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>35046 lines of code analyzed,
+	in 556 classes, 
+	in 16 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">3</td>
+<td align="right">0.09</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">148</td>
+<td align="right">4.22</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>151</b>
+</td>
+<td align="right">
+<b>4.31</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_I18N">Internationalization Warnings</a>
+</li>
+<li>
+<a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+</li>
+<li>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">5</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</td>
+<td align="right">3</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_I18N">Internationalization Warnings</a>
+</td>
+<td align="right">3</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+</td>
+<td align="right">83</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">56</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>151</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68126');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>teammates.common.datatransfer.attributes.CommentAttributes defines compareTo(CommentAttributes) and uses Object.equals()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68126" style="display: none;">
+<a href="#EQ_COMPARETO_USE_OBJECT_EQUALS">Bug type EQ_COMPARETO_USE_OBJECT_EQUALS (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.CommentAttributes<br/>In method teammates.common.datatransfer.attributes.CommentAttributes.compareTo(CommentAttributes)<br/>At CommentAttributes.java:[lines 320-323]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68179');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>teammates.common.datatransfer.attributes.CourseAttributes defines compareTo(CourseAttributes) and uses Object.equals()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68179" style="display: none;">
+<a href="#EQ_COMPARETO_USE_OBJECT_EQUALS">Bug type EQ_COMPARETO_USE_OBJECT_EQUALS (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.CourseAttributes<br/>In method teammates.common.datatransfer.attributes.CourseAttributes.compareTo(CourseAttributes)<br/>At CourseAttributes.java:[lines 134-137]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77153');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>teammates.ui.template.InstructorFeedbackResultsParticipantPanel defines compareTo(InstructorFeedbackResultsParticipantPanel) and uses Object.equals()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77153" style="display: none;">
+<a href="#EQ_COMPARETO_USE_OBJECT_EQUALS">Bug type EQ_COMPARETO_USE_OBJECT_EQUALS (click for details)</a>
+<br/>In class teammates.ui.template.InstructorFeedbackResultsParticipantPanel<br/>In method teammates.ui.template.InstructorFeedbackResultsParticipantPanel.compareTo(InstructorFeedbackResultsParticipantPanel)<br/>At InstructorFeedbackResultsParticipantPanel.java:[lines 74-77]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70085');">
+<td>
+<span class="priority-2">RR</span>
+</td>
+<td>teammates.common.util.GoogleCloudStorageHelper.getGroupReceiverList(BlobKey) ignores result of java.io.InputStream.read(byte[])</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70085" style="display: none;">
+<a href="#RR_NOT_CHECKED">Bug type RR_NOT_CHECKED (click for details)</a>
+<br/>In class teammates.common.util.GoogleCloudStorageHelper<br/>In method teammates.common.util.GoogleCloudStorageHelper.getGroupReceiverList(BlobKey)<br/>Called method java.io.InputStream.read(byte[])<br/>At GoogleCloudStorageHelper.java:[line 138]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75890');">
+<td>
+<span class="priority-2">RR</span>
+</td>
+<td>teammates.ui.controller.StudentProfilePictureUploadAction.renameFileToGoogleId(BlobInfo) ignores result of java.io.InputStream.read(byte[])</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75890" style="display: none;">
+<a href="#RR_NOT_CHECKED">Bug type RR_NOT_CHECKED (click for details)</a>
+<br/>In class teammates.ui.controller.StudentProfilePictureUploadAction<br/>In method teammates.ui.controller.StudentProfilePictureUploadAction.renameFileToGoogleId(BlobInfo)<br/>Called method java.io.InputStream.read(byte[])<br/>At StudentProfilePictureUploadAction.java:[line 73]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75702');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Null passed for non-null parameter of teammates.logic.api.GateKeeper.verifyAccessible(InstructorAttributes, FeedbackSessionAttributes, boolean, String, String) in teammates.ui.controller.InstructorFeedbackResponseCommentDeleteAction.verifyAccessibleForInstructorToFeedbackResponseComment(String, InstructorAttributes, FeedbackSessionAttributes, FeedbackResponseAttributes)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75702" style="display: none;">
+<a href="#NP_NULL_PARAM_DEREF">Bug type NP_NULL_PARAM_DEREF (click for details)</a>
+<br/>In class teammates.ui.controller.InstructorFeedbackResponseCommentDeleteAction<br/>In method teammates.ui.controller.InstructorFeedbackResponseCommentDeleteAction.verifyAccessibleForInstructorToFeedbackResponseComment(String, InstructorAttributes, FeedbackSessionAttributes, FeedbackResponseAttributes)<br/>Called method teammates.logic.api.GateKeeper.verifyAccessible(InstructorAttributes, FeedbackSessionAttributes, boolean, String, String)<br/>Argument 1 might be null but must not be null<br/>Value loaded from instructor<br/>Method invoked at InstructorFeedbackResponseCommentDeleteAction.java:[line 62]<br/>Known null at InstructorFeedbackResponseCommentDeleteAction.java:[line 59]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75796');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Null passed for non-null parameter of teammates.logic.api.GateKeeper.verifyAccessible(InstructorAttributes, FeedbackSessionAttributes, boolean, String, String) in teammates.ui.controller.InstructorFeedbackResponseCommentEditAction.verifyAccessibleForInstructorToFeedbackResponseComment(String, InstructorAttributes, FeedbackSessionAttributes, FeedbackResponseAttributes)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75796" style="display: none;">
+<a href="#NP_NULL_PARAM_DEREF">Bug type NP_NULL_PARAM_DEREF (click for details)</a>
+<br/>In class teammates.ui.controller.InstructorFeedbackResponseCommentEditAction<br/>In method teammates.ui.controller.InstructorFeedbackResponseCommentEditAction.verifyAccessibleForInstructorToFeedbackResponseComment(String, InstructorAttributes, FeedbackSessionAttributes, FeedbackResponseAttributes)<br/>Called method teammates.logic.api.GateKeeper.verifyAccessible(InstructorAttributes, FeedbackSessionAttributes, boolean, String, String)<br/>Argument 1 might be null but must not be null<br/>Value loaded from instructor<br/>Method invoked at InstructorFeedbackResponseCommentEditAction.java:[line 126]<br/>Known null at InstructorFeedbackResponseCommentEditAction.java:[line 123]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76949');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: teammates.ui.pagedata.InstructorFeedbackResultsPageData.feedbackSessionName</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76949" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.InstructorFeedbackResultsPageData<br/>Field teammates.ui.pagedata.InstructorFeedbackResultsPageData.feedbackSessionName<br/>At InstructorFeedbackResultsPageData.java:[line 449]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_I18N">Internationalization Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70016');">
+<td>
+<span class="priority-1">Dm</span>
+</td>
+<td>Found reliance on default encoding in teammates.common.util.GoogleCloudStorageHelper.getGroupReceiverList(BlobKey): new String(byte[])</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70016" style="display: none;">
+<a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+<br/>In class teammates.common.util.GoogleCloudStorageHelper<br/>In method teammates.common.util.GoogleCloudStorageHelper.getGroupReceiverList(BlobKey)<br/>Called method new String(byte[])<br/>At GoogleCloudStorageHelper.java:[line 146]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70154');">
+<td>
+<span class="priority-1">Dm</span>
+</td>
+<td>Found reliance on default encoding in teammates.common.util.StringHelper.decrypt(String): new String(byte[])</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70154" style="display: none;">
+<a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+<br/>In class teammates.common.util.StringHelper<br/>In method teammates.common.util.StringHelper.decrypt(String)<br/>Called method new String(byte[])<br/>At StringHelper.java:[line 152]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70223');">
+<td>
+<span class="priority-1">Dm</span>
+</td>
+<td>Found reliance on default encoding in teammates.common.util.StringHelper.encrypt(String): String.getBytes()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70223" style="display: none;">
+<a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+<br/>In class teammates.common.util.StringHelper<br/>In method teammates.common.util.StringHelper.encrypt(String)<br/>Called method String.getBytes()<br/>At StringHelper.java:[line 131]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67765');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.AdminEmailAttributes.getCreateDate() may expose internal representation by returning AdminEmailAttributes.createDate</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67765" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.AdminEmailAttributes<br/>In method teammates.common.datatransfer.attributes.AdminEmailAttributes.getCreateDate()<br/>Field teammates.common.datatransfer.attributes.AdminEmailAttributes.createDate<br/>At AdminEmailAttributes.java:[line 122]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67833');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.AdminEmailAttributes.getSendDate() may expose internal representation by returning AdminEmailAttributes.sendDate</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67833" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.AdminEmailAttributes<br/>In method teammates.common.datatransfer.attributes.AdminEmailAttributes.getSendDate()<br/>Field teammates.common.datatransfer.attributes.AdminEmailAttributes.sendDate<br/>At AdminEmailAttributes.java:[line 118]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68232');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackQuestionAttributes.getCreatedAt() may expose internal representation by returning FeedbackQuestionAttributes.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68232" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackQuestionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackQuestionAttributes.getCreatedAt()<br/>Field teammates.common.datatransfer.attributes.FeedbackQuestionAttributes.createdAt<br/>At FeedbackQuestionAttributes.java:[line 98]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68300');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackQuestionAttributes.getUpdatedAt() may expose internal representation by returning FeedbackQuestionAttributes.updatedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68300" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackQuestionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackQuestionAttributes.getUpdatedAt()<br/>Field teammates.common.datatransfer.attributes.FeedbackQuestionAttributes.updatedAt<br/>At FeedbackQuestionAttributes.java:[line 102]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68368');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackResponseAttributes.getCreatedAt() may expose internal representation by returning FeedbackResponseAttributes.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68368" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackResponseAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackResponseAttributes.getCreatedAt()<br/>Field teammates.common.datatransfer.attributes.FeedbackResponseAttributes.createdAt<br/>At FeedbackResponseAttributes.java:[line 106]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68436');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackResponseAttributes.getUpdatedAt() may expose internal representation by returning FeedbackResponseAttributes.updatedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68436" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackResponseAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackResponseAttributes.getUpdatedAt()<br/>Field teammates.common.datatransfer.attributes.FeedbackResponseAttributes.updatedAt<br/>At FeedbackResponseAttributes.java:[line 110]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68654');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getCreatedTime() may expose internal representation by returning FeedbackSessionAttributes.createdTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68654" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getCreatedTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.createdTime<br/>At FeedbackSessionAttributes.java:[line 596]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68722');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getEndTime() may expose internal representation by returning FeedbackSessionAttributes.endTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68722" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getEndTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.endTime<br/>At FeedbackSessionAttributes.java:[line 612]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68790');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getResultsVisibleFromTime() may expose internal representation by returning FeedbackSessionAttributes.resultsVisibleFromTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68790" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getResultsVisibleFromTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.resultsVisibleFromTime<br/>At FeedbackSessionAttributes.java:[line 628]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68858');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getSessionEndTime() may expose internal representation by returning FeedbackSessionAttributes.endTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68858" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getSessionEndTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.endTime<br/>At FeedbackSessionAttributes.java:[line 563]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68926');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getSessionStartTime() may expose internal representation by returning FeedbackSessionAttributes.startTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68926" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getSessionStartTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.startTime<br/>At FeedbackSessionAttributes.java:[line 558]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68994');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getSessionVisibleFromTime() may expose internal representation by returning FeedbackSessionAttributes.sessionVisibleFromTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68994" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getSessionVisibleFromTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.sessionVisibleFromTime<br/>At FeedbackSessionAttributes.java:[line 620]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69062');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getStartTime() may expose internal representation by returning FeedbackSessionAttributes.startTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69062" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.getStartTime()<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.startTime<br/>At FeedbackSessionAttributes.java:[line 604]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69880');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.StudentAttributes.getCreatedAt() may expose internal representation by returning StudentAttributes.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69880" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.StudentAttributes<br/>In method teammates.common.datatransfer.attributes.StudentAttributes.getCreatedAt()<br/>Field teammates.common.datatransfer.attributes.StudentAttributes.createdAt<br/>At StudentAttributes.java:[line 351]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69948');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.common.datatransfer.attributes.StudentAttributes.getUpdatedAt() may expose internal representation by returning StudentAttributes.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69948" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.StudentAttributes<br/>In method teammates.common.datatransfer.attributes.StudentAttributes.getUpdatedAt()<br/>Field teammates.common.datatransfer.attributes.StudentAttributes.updatedAt<br/>At StudentAttributes.java:[line 355]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72038');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.Account.getCreatedAt() may expose internal representation by returning Account.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72038" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.Account<br/>In method teammates.storage.entity.Account.getCreatedAt()<br/>Field teammates.storage.entity.Account.createdAt<br/>At Account.java:[line 113]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72181');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.AdminEmail.getCreateDate() may expose internal representation by returning AdminEmail.createDate</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72181" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.AdminEmail<br/>In method teammates.storage.entity.AdminEmail.getCreateDate()<br/>Field teammates.storage.entity.AdminEmail.createDate<br/>At AdminEmail.java:[line 122]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72249');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.AdminEmail.getSendDate() may expose internal representation by returning AdminEmail.sendDate</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72249" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.AdminEmail<br/>In method teammates.storage.entity.AdminEmail.getSendDate()<br/>Field teammates.storage.entity.AdminEmail.sendDate<br/>At AdminEmail.java:[line 110]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72467');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.Comment.getCreatedAt() may expose internal representation by returning Comment.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72467" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.Comment<br/>In method teammates.storage.entity.Comment.getCreatedAt()<br/>Field teammates.storage.entity.Comment.createdAt<br/>At Comment.java:[line 205]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72535');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.Comment.getLastEditedAt() may expose internal representation by returning Comment.lastEditedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72535" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.Comment<br/>In method teammates.storage.entity.Comment.getLastEditedAt()<br/>Field teammates.storage.entity.Comment.lastEditedAt<br/>At Comment.java:[line 229]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72903');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.Course.getCreatedAt() may expose internal representation by returning Course.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72903" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.Course<br/>In method teammates.storage.entity.Course.getCreatedAt()<br/>Field teammates.storage.entity.Course.createdAt<br/>At Course.java:[line 66]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73046');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.CourseStudent.getCreatedAt() may expose internal representation by returning CourseStudent.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73046" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.CourseStudent<br/>In method teammates.storage.entity.CourseStudent.getCreatedAt()<br/>Field teammates.storage.entity.CourseStudent.createdAt<br/>At CourseStudent.java:[line 112]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73114');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.CourseStudent.getUpdatedAt() may expose internal representation by returning CourseStudent.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73114" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.CourseStudent<br/>In method teammates.storage.entity.CourseStudent.getUpdatedAt()<br/>Field teammates.storage.entity.CourseStudent.updatedAt<br/>At CourseStudent.java:[line 121]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73332');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackQuestion.getCreatedAt() may expose internal representation by returning FeedbackQuestion.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73332" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackQuestion<br/>In method teammates.storage.entity.FeedbackQuestion.getCreatedAt()<br/>Field teammates.storage.entity.FeedbackQuestion.createdAt<br/>At FeedbackQuestion.java:[line 116]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73400');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackQuestion.getUpdatedAt() may expose internal representation by returning FeedbackQuestion.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73400" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackQuestion<br/>In method teammates.storage.entity.FeedbackQuestion.getUpdatedAt()<br/>Field teammates.storage.entity.FeedbackQuestion.updatedAt<br/>At FeedbackQuestion.java:[line 120]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73618');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponse.getCreatedAt() may expose internal representation by returning FeedbackResponse.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73618" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponse<br/>In method teammates.storage.entity.FeedbackResponse.getCreatedAt()<br/>Field teammates.storage.entity.FeedbackResponse.createdAt<br/>At FeedbackResponse.java:[line 170]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73686');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponse.getUpdatedAt() may expose internal representation by returning FeedbackResponse.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73686" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponse<br/>In method teammates.storage.entity.FeedbackResponse.getUpdatedAt()<br/>Field teammates.storage.entity.FeedbackResponse.updatedAt<br/>At FeedbackResponse.java:[line 174]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73904');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponseComment.getCreatedAt() may expose internal representation by returning FeedbackResponseComment.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73904" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponseComment<br/>In method teammates.storage.entity.FeedbackResponseComment.getCreatedAt()<br/>Field teammates.storage.entity.FeedbackResponseComment.createdAt<br/>At FeedbackResponseComment.java:[line 194]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73972');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponseComment.getLastEditedAt() may expose internal representation by returning FeedbackResponseComment.lastEditedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73972" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponseComment<br/>In method teammates.storage.entity.FeedbackResponseComment.getLastEditedAt()<br/>Field teammates.storage.entity.FeedbackResponseComment.lastEditedAt<br/>At FeedbackResponseComment.java:[line 242]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74340');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.getCreatedTime() may expose internal representation by returning FeedbackSession.createdTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74340" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.getCreatedTime()<br/>Field teammates.storage.entity.FeedbackSession.createdTime<br/>At FeedbackSession.java:[line 192]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74408');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.getEndTime() may expose internal representation by returning FeedbackSession.endTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74408" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.getEndTime()<br/>Field teammates.storage.entity.FeedbackSession.endTime<br/>At FeedbackSession.java:[line 208]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74476');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.getResultsVisibleFromTime() may expose internal representation by returning FeedbackSession.resultsVisibleFromTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74476" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.getResultsVisibleFromTime()<br/>Field teammates.storage.entity.FeedbackSession.resultsVisibleFromTime<br/>At FeedbackSession.java:[line 224]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74544');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.getSessionVisibleFromTime() may expose internal representation by returning FeedbackSession.sessionVisibleFromTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74544" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.getSessionVisibleFromTime()<br/>Field teammates.storage.entity.FeedbackSession.sessionVisibleFromTime<br/>At FeedbackSession.java:[line 216]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74612');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.getStartTime() may expose internal representation by returning FeedbackSession.startTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74612" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.getStartTime()<br/>Field teammates.storage.entity.FeedbackSession.startTime<br/>At FeedbackSession.java:[line 200]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75430');">
+<td>
+<span class="priority-2">EI</span>
+</td>
+<td>teammates.storage.entity.StudentProfile.getModifiedDate() may expose internal representation by returning StudentProfile.modifiedDate</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75430" style="display: none;">
+<a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+<br/>In class teammates.storage.entity.StudentProfile<br/>In method teammates.storage.entity.StudentProfile.getModifiedDate()<br/>Field teammates.storage.entity.StudentProfile.modifiedDate<br/>At StudentProfile.java:[line 175]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67901');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.AdminEmailAttributes(String, List, List, Text, Date) may expose internal representation by storing an externally mutable object into AdminEmailAttributes.sendDate</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67901" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.AdminEmailAttributes<br/>In method new teammates.common.datatransfer.attributes.AdminEmailAttributes(String, List, List, Text, Date)<br/>Field teammates.common.datatransfer.attributes.AdminEmailAttributes.sendDate<br/>Local variable named sendDate<br/>At AdminEmailAttributes.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67976');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.CommentAttributes(String, String, CommentParticipantType, Set, Date, Text) may expose internal representation by storing an externally mutable object into CommentAttributes.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67976" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.CommentAttributes<br/>In method new teammates.common.datatransfer.attributes.CommentAttributes(String, String, CommentParticipantType, Set, Date, Text)<br/>Field teammates.common.datatransfer.attributes.CommentAttributes.createdAt<br/>Local variable named createdAt<br/>At CommentAttributes.java:[line 55]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68051');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.CommentAttributes(String, String, CommentParticipantType, Set, Date, Text) may expose internal representation by storing an externally mutable object into CommentAttributes.lastEditedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68051" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.CommentAttributes<br/>In method new teammates.common.datatransfer.attributes.CommentAttributes(String, String, CommentParticipantType, Set, Date, Text)<br/>Field teammates.common.datatransfer.attributes.CommentAttributes.lastEditedAt<br/>Local variable named createdAt<br/>At CommentAttributes.java:[line 57]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68504');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes(String, String, String, String, String, Date, Text, String, String) may expose internal representation by storing an externally mutable object into FeedbackResponseCommentAttributes.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68504" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes(String, String, String, String, String, Date, Text, String, String)<br/>Field teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes.createdAt<br/>Local variable named createdAt<br/>At FeedbackResponseCommentAttributes.java:[line 76]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68579');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes(String, String, String, String, String, Date, Text, String, String) may expose internal representation by storing an externally mutable object into FeedbackResponseCommentAttributes.lastEditedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68579" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes(String, String, String, String, String, Date, Text, String, String)<br/>Field teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes.lastEditedAt<br/>Local variable named createdAt<br/>At FeedbackResponseCommentAttributes.java:[line 83]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69130');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.createdTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69130" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.createdTime<br/>Local variable named createdTime<br/>At FeedbackSessionAttributes.java:[line 108]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69205');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.endTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69205" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.endTime<br/>Local variable named endTime<br/>At FeedbackSessionAttributes.java:[line 110]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69280');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.resultsVisibleFromTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69280" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.resultsVisibleFromTime<br/>Local variable named resultsVisibleFromTime<br/>At FeedbackSessionAttributes.java:[line 112]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69355');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.sessionVisibleFromTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69355" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.sessionVisibleFromTime<br/>Local variable named sessionVisibleFromTime<br/>At FeedbackSessionAttributes.java:[line 111]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69430');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.startTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69430" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method new teammates.common.datatransfer.attributes.FeedbackSessionAttributes(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.startTime<br/>Local variable named startTime<br/>At FeedbackSessionAttributes.java:[line 109]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69505');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setCreatedTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.createdTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69505" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setCreatedTime(Date)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.createdTime<br/>Local variable named createdTime<br/>At FeedbackSessionAttributes.java:[line 600]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69580');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setEndTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.endTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69580" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setEndTime(Date)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.endTime<br/>Local variable named endTime<br/>At FeedbackSessionAttributes.java:[line 616]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69655');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setResultsVisibleFromTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.resultsVisibleFromTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69655" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setResultsVisibleFromTime(Date)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.resultsVisibleFromTime<br/>Local variable named resultsVisibleFromTime<br/>At FeedbackSessionAttributes.java:[line 632]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69730');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setSessionVisibleFromTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.sessionVisibleFromTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69730" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setSessionVisibleFromTime(Date)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.sessionVisibleFromTime<br/>Local variable named sessionVisibleFromTime<br/>At FeedbackSessionAttributes.java:[line 624]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69805');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setStartTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSessionAttributes.startTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69805" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.attributes.FeedbackSessionAttributes<br/>In method teammates.common.datatransfer.attributes.FeedbackSessionAttributes.setStartTime(Date)<br/>Field teammates.common.datatransfer.attributes.FeedbackSessionAttributes.startTime<br/>Local variable named startTime<br/>At FeedbackSessionAttributes.java:[line 608]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67690');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.common.datatransfer.TeamEvalResult(int[][]) may expose internal representation by storing an externally mutable object into TeamEvalResult.claimed</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67690" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.common.datatransfer.TeamEvalResult<br/>In method new teammates.common.datatransfer.TeamEvalResult(int[][])<br/>Field teammates.common.datatransfer.TeamEvalResult.claimed<br/>Local variable named submissionValues<br/>At TeamEvalResult.java:[line 49]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72106');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.Account.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into Account.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72106" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.Account<br/>In method teammates.storage.entity.Account.setCreatedAt(Date)<br/>Field teammates.storage.entity.Account.createdAt<br/>Local variable named createdAt<br/>At Account.java:[line 117]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72317');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.AdminEmail(List, List, String, Text, Date) may expose internal representation by storing an externally mutable object into AdminEmail.sendDate</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72317" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.AdminEmail<br/>In method new teammates.storage.entity.AdminEmail(List, List, String, Text, Date)<br/>Field teammates.storage.entity.AdminEmail.sendDate<br/>Local variable named sendDate<br/>At AdminEmail.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72392');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.AdminEmail.setSendDate(Date) may expose internal representation by storing an externally mutable object into AdminEmail.sendDate</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72392" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.AdminEmail<br/>In method teammates.storage.entity.AdminEmail.setSendDate(Date)<br/>Field teammates.storage.entity.AdminEmail.sendDate<br/>Local variable named sendDate<br/>At AdminEmail.java:[line 90]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72603');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.Comment(String, String, CommentParticipantType, Set, CommentStatus, CommentSendingState, List, List, List, Text, Date, String, Date) may expose internal representation by storing an externally mutable object into Comment.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72603" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.Comment<br/>In method new teammates.storage.entity.Comment(String, String, CommentParticipantType, Set, CommentStatus, CommentSendingState, List, List, List, Text, Date, String, Date)<br/>Field teammates.storage.entity.Comment.createdAt<br/>Local variable named date<br/>At Comment.java:[line 107]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72678');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.Comment(String, String, CommentParticipantType, Set, CommentStatus, CommentSendingState, List, List, List, Text, Date, String, Date) may expose internal representation by storing an externally mutable object into Comment.lastEditedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72678" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.Comment<br/>In method new teammates.storage.entity.Comment(String, String, CommentParticipantType, Set, CommentStatus, CommentSendingState, List, List, List, Text, Date, String, Date)<br/>Field teammates.storage.entity.Comment.lastEditedAt<br/>Local variable stored in JVM register ?<br/>At Comment.java:[line 110]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72753');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.Comment.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into Comment.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72753" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.Comment<br/>In method teammates.storage.entity.Comment.setCreatedAt(Date)<br/>Field teammates.storage.entity.Comment.createdAt<br/>Local variable named createdAt<br/>At Comment.java:[line 209]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72828');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.Comment.setLastEditedAt(Date) may expose internal representation by storing an externally mutable object into Comment.lastEditedAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72828" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.Comment<br/>In method teammates.storage.entity.Comment.setLastEditedAt(Date)<br/>Field teammates.storage.entity.Comment.lastEditedAt<br/>Local variable named lastEditedAt<br/>At Comment.java:[line 233]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72971');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.Course.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into Course.createdAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72971" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.Course<br/>In method teammates.storage.entity.Course.setCreatedAt(Date)<br/>Field teammates.storage.entity.Course.createdAt<br/>Local variable named createdAt<br/>At Course.java:[line 70]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73182');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.CourseStudent.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into CourseStudent.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73182" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.CourseStudent<br/>In method teammates.storage.entity.CourseStudent.setCreatedAt(Date)<br/>Field teammates.storage.entity.CourseStudent.createdAt<br/>Local variable named created<br/>At CourseStudent.java:[line 116]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73257');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.CourseStudent.setLastUpdate(Date) may expose internal representation by storing an externally mutable object into CourseStudent.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73257" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.CourseStudent<br/>In method teammates.storage.entity.CourseStudent.setLastUpdate(Date)<br/>Field teammates.storage.entity.CourseStudent.updatedAt<br/>Local variable named updatedAt<br/>At CourseStudent.java:[line 126]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73468');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackQuestion.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into FeedbackQuestion.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73468" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackQuestion<br/>In method teammates.storage.entity.FeedbackQuestion.setCreatedAt(Date)<br/>Field teammates.storage.entity.FeedbackQuestion.createdAt<br/>Local variable named newDate<br/>At FeedbackQuestion.java:[line 124]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73543');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackQuestion.setLastUpdate(Date) may expose internal representation by storing an externally mutable object into FeedbackQuestion.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73543" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackQuestion<br/>In method teammates.storage.entity.FeedbackQuestion.setLastUpdate(Date)<br/>Field teammates.storage.entity.FeedbackQuestion.updatedAt<br/>Local variable named newDate<br/>At FeedbackQuestion.java:[line 130]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73754');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponse.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into FeedbackResponse.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73754" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponse<br/>In method teammates.storage.entity.FeedbackResponse.setCreatedAt(Date)<br/>Field teammates.storage.entity.FeedbackResponse.createdAt<br/>Local variable named newDate<br/>At FeedbackResponse.java:[line 178]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73829');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponse.setLastUpdate(Date) may expose internal representation by storing an externally mutable object into FeedbackResponse.updatedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73829" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponse<br/>In method teammates.storage.entity.FeedbackResponse.setLastUpdate(Date)<br/>Field teammates.storage.entity.FeedbackResponse.updatedAt<br/>Local variable named newDate<br/>At FeedbackResponse.java:[line 184]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74040');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackResponseComment(String, String, String, String, String, CommentSendingState, Date, Text, String, String, List, List, String, Date) may expose internal representation by storing an externally mutable object into FeedbackResponseComment.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74040" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponseComment<br/>In method new teammates.storage.entity.FeedbackResponseComment(String, String, String, String, String, CommentSendingState, Date, Text, String, String, List, List, String, Date)<br/>Field teammates.storage.entity.FeedbackResponseComment.createdAt<br/>Local variable named createdAt<br/>At FeedbackResponseComment.java:[line 99]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74115');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackResponseComment(String, String, String, String, String, CommentSendingState, Date, Text, String, String, List, List, String, Date) may expose internal representation by storing an externally mutable object into FeedbackResponseComment.lastEditedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74115" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponseComment<br/>In method new teammates.storage.entity.FeedbackResponseComment(String, String, String, String, String, CommentSendingState, Date, Text, String, String, List, List, String, Date)<br/>Field teammates.storage.entity.FeedbackResponseComment.lastEditedAt<br/>Local variable stored in JVM register ?<br/>At FeedbackResponseComment.java:[line 107]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74190');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponseComment.setCreatedAt(Date) may expose internal representation by storing an externally mutable object into FeedbackResponseComment.createdAt</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74190" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponseComment<br/>In method teammates.storage.entity.FeedbackResponseComment.setCreatedAt(Date)<br/>Field teammates.storage.entity.FeedbackResponseComment.createdAt<br/>Local variable named createdAt<br/>At FeedbackResponseComment.java:[line 198]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74265');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackResponseComment.setLastEditedAt(Date) may expose internal representation by storing an externally mutable object into FeedbackResponseComment.lastEditedAt</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74265" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackResponseComment<br/>In method teammates.storage.entity.FeedbackResponseComment.setLastEditedAt(Date)<br/>Field teammates.storage.entity.FeedbackResponseComment.lastEditedAt<br/>Local variable named lastEditedAt<br/>At FeedbackResponseComment.java:[line 246]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74680');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSession.createdTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74680" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.storage.entity.FeedbackSession.createdTime<br/>Local variable named createdTime<br/>At FeedbackSession.java:[line 138]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74755');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSession.endTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74755" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.storage.entity.FeedbackSession.endTime<br/>Local variable named endTime<br/>At FeedbackSession.java:[line 140]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74830');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSession.resultsVisibleFromTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74830" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.storage.entity.FeedbackSession.resultsVisibleFromTime<br/>Local variable named resultsVisibleFromTime<br/>At FeedbackSession.java:[line 142]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74905');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSession.sessionVisibleFromTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74905" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.storage.entity.FeedbackSession.sessionVisibleFromTime<br/>Local variable named sessionVisibleFromTime<br/>At FeedbackSession.java:[line 141]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74980');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set) may expose internal representation by storing an externally mutable object into FeedbackSession.startTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74980" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method new teammates.storage.entity.FeedbackSession(String, String, String, Text, Date, Date, Date, Date, Date, double, int, FeedbackSessionType, boolean, boolean, boolean, boolean, boolean, boolean, boolean, Set, Set)<br/>Field teammates.storage.entity.FeedbackSession.startTime<br/>Local variable named startTime<br/>At FeedbackSession.java:[line 139]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75055');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.setCreatedTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSession.createdTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75055" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.setCreatedTime(Date)<br/>Field teammates.storage.entity.FeedbackSession.createdTime<br/>Local variable named createdTime<br/>At FeedbackSession.java:[line 196]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75130');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.setEndTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSession.endTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75130" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.setEndTime(Date)<br/>Field teammates.storage.entity.FeedbackSession.endTime<br/>Local variable named endTime<br/>At FeedbackSession.java:[line 212]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75205');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.setResultsVisibleFromTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSession.resultsVisibleFromTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75205" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.setResultsVisibleFromTime(Date)<br/>Field teammates.storage.entity.FeedbackSession.resultsVisibleFromTime<br/>Local variable named resultsVisibleFromTime<br/>At FeedbackSession.java:[line 228]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75280');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.setSessionVisibleFromTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSession.sessionVisibleFromTime</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75280" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.setSessionVisibleFromTime(Date)<br/>Field teammates.storage.entity.FeedbackSession.sessionVisibleFromTime<br/>Local variable named sessionVisibleFromTime<br/>At FeedbackSession.java:[line 220]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75355');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.FeedbackSession.setStartTime(Date) may expose internal representation by storing an externally mutable object into FeedbackSession.startTime</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75355" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.FeedbackSession<br/>In method teammates.storage.entity.FeedbackSession.setStartTime(Date)<br/>Field teammates.storage.entity.FeedbackSession.startTime<br/>Local variable named startTime<br/>At FeedbackSession.java:[line 204]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75498');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.storage.entity.StudentProfile.setModifiedDate(Date) may expose internal representation by storing an externally mutable object into StudentProfile.modifiedDate</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75498" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.storage.entity.StudentProfile<br/>In method teammates.storage.entity.StudentProfile.setModifiedDate(Date)<br/>Field teammates.storage.entity.StudentProfile.modifiedDate<br/>Local variable named modifiedDate<br/>At StudentProfile.java:[line 179]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76316');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.ui.pagedata.AdminSessionsPageData.init(Map, Map, int, int, int, int, int, Date, Date, double, boolean) may expose internal representation by storing an externally mutable object into AdminSessionsPageData.rangeEnd</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76316" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminSessionsPageData<br/>In method teammates.ui.pagedata.AdminSessionsPageData.init(Map, Map, int, int, int, int, int, Date, Date, double, boolean)<br/>Field teammates.ui.pagedata.AdminSessionsPageData.rangeEnd<br/>Local variable named rangeEnd<br/>At AdminSessionsPageData.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76391');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>teammates.ui.pagedata.AdminSessionsPageData.init(Map, Map, int, int, int, int, int, Date, Date, double, boolean) may expose internal representation by storing an externally mutable object into AdminSessionsPageData.rangeStart</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76391" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminSessionsPageData<br/>In method teammates.ui.pagedata.AdminSessionsPageData.init(Map, Map, int, int, int, int, int, Date, Date, double, boolean)<br/>Field teammates.ui.pagedata.AdminSessionsPageData.rangeStart<br/>Local variable named rangeStart<br/>At AdminSessionsPageData.java:[line 47]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76772');">
+<td>
+<span class="priority-2">EI2</span>
+</td>
+<td>new teammates.ui.pagedata.InstructorCourseEnrollResultPageData(AccountAttributes, String, List[], boolean, String) may expose internal representation by storing an externally mutable object into InstructorCourseEnrollResultPageData.students</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76772" style="display: none;">
+<a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+<br/>In class teammates.ui.pagedata.InstructorCourseEnrollResultPageData<br/>In method new teammates.ui.pagedata.InstructorCourseEnrollResultPageData(AccountAttributes, String, List[], boolean, String)<br/>Field teammates.ui.pagedata.InstructorCourseEnrollResultPageData.students<br/>Local variable named students<br/>At InstructorCourseEnrollResultPageData.java:[line 31]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_PERFORMANCE">Performance Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77051');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: teammates.ui.pagedata.StudentProfileCreateFormUrlAjaxPageData.isError</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77051" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.StudentProfileCreateFormUrlAjaxPageData<br/>Field teammates.ui.pagedata.StudentProfileCreateFormUrlAjaxPageData.isError<br/>At StudentProfileCreateFormUrlAjaxPageData.java:[line 13]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70292');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.CommentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70292" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.CommentsLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70339');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.CoursesLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70339" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.CoursesLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70386');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.FeedbackQuestionsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70386" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70433');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.FeedbackResponseCommentsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70433" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70480');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.FeedbackResponsesLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70480" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70527');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.FeedbackSessionsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70527" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70574');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70574" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70621');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.AccountsLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70621" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.AccountsLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At AccountsLogic.java:[lines 28-346]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70668');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.CoursesLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70668" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.CoursesLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70715');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.FeedbackQuestionsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70715" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70762');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.FeedbackResponseCommentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70762" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70809');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.FeedbackResponsesLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70809" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70856');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.FeedbackSessionsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70856" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70903');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70903" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70950');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CommentsLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70950" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CommentsLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At CommentsLogic.java:[lines 39-933]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70997');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CoursesLogic and teammates.logic.core.FeedbackQuestionsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70997" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CoursesLogic<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>At CoursesLogic.java:[lines 42-722]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71044');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CoursesLogic and teammates.logic.core.FeedbackResponseCommentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71044" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CoursesLogic<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>At CoursesLogic.java:[lines 42-722]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71091');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CoursesLogic and teammates.logic.core.FeedbackResponsesLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71091" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CoursesLogic<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>At CoursesLogic.java:[lines 42-722]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71138');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CoursesLogic and teammates.logic.core.FeedbackSessionsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71138" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CoursesLogic<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>At CoursesLogic.java:[lines 42-722]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71185');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CoursesLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71185" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CoursesLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At CoursesLogic.java:[lines 42-722]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71232');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.CoursesLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71232" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.CoursesLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At CoursesLogic.java:[lines 42-722]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71279');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackQuestionsLogic and teammates.logic.core.FeedbackResponseCommentsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71279" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>At FeedbackQuestionsLogic.java:[lines 36-721]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71326');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackQuestionsLogic and teammates.logic.core.FeedbackResponsesLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71326" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>At FeedbackQuestionsLogic.java:[lines 36-721]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71373');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackQuestionsLogic and teammates.logic.core.FeedbackSessionsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71373" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>At FeedbackQuestionsLogic.java:[lines 36-721]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71420');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackQuestionsLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71420" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At FeedbackQuestionsLogic.java:[lines 36-721]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71467');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackQuestionsLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71467" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackQuestionsLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At FeedbackQuestionsLogic.java:[lines 36-721]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71514');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponseCommentsLogic and teammates.logic.core.FeedbackResponsesLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71514" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>At FeedbackResponseCommentsLogic.java:[lines 33-396]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71561');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponseCommentsLogic and teammates.logic.core.FeedbackSessionsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71561" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>At FeedbackResponseCommentsLogic.java:[lines 33-396]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71608');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponseCommentsLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71608" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At FeedbackResponseCommentsLogic.java:[lines 33-396]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71655');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponseCommentsLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71655" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At FeedbackResponseCommentsLogic.java:[lines 33-396]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71756');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponsesLogic and teammates.logic.core.FeedbackSessionsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71756" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>At FeedbackResponsesLogic.java:[lines 33-860]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71803');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponsesLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71803" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At FeedbackResponsesLogic.java:[lines 33-860]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71850');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackResponsesLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71850" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponsesLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At FeedbackResponsesLogic.java:[lines 33-860]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71897');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackSessionsLogic and teammates.logic.core.InstructorsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71897" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>In class teammates.logic.core.InstructorsLogic<br/>At FeedbackSessionsLogic.java:[lines 73-2449]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71944');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.FeedbackSessionsLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71944" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackSessionsLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At FeedbackSessionsLogic.java:[lines 73-2449]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71991');">
+<td>
+<span class="priority-2">IC</span>
+</td>
+<td>Initialization circularity between teammates.logic.core.InstructorsLogic and teammates.logic.core.StudentsLogic</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71991" style="display: none;">
+<a href="#IC_INIT_CIRCULARITY">Bug type IC_INIT_CIRCULARITY (click for details)</a>
+<br/>In class teammates.logic.core.InstructorsLogic<br/>In class teammates.logic.core.StudentsLogic<br/>At InstructorsLogic.java:[lines 25-302]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75573');">
+<td>
+<span class="priority-2">RCN</span>
+</td>
+<td>Redundant nullcheck of team, which is known to be non-null in teammates.storage.search.FeedbackResponseCommentSearchDocument.prepareData()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75573" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class teammates.storage.search.FeedbackResponseCommentSearchDocument<br/>In method teammates.storage.search.FeedbackResponseCommentSearchDocument.prepareData()<br/>Value loaded from team<br/>Return value of teammates.storage.api.StudentsDb.getStudentsForTeam(String, String) of type java.util.List<br/>Redundant null check at FeedbackResponseCommentSearchDocument.java:[line 114]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71702');">
+<td>
+<span class="priority-2">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown in teammates.logic.core.FeedbackResponseCommentsLogic.createFeedbackResponseComment(FeedbackResponseCommentAttributes)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71702" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class teammates.logic.core.FeedbackResponseCommentsLogic<br/>In method teammates.logic.core.FeedbackResponseCommentsLogic.createFeedbackResponseComment(FeedbackResponseCommentAttributes)<br/>At FeedbackResponseCommentsLogic.java:[line 71]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75651');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.controller.ActionResult.account</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75651" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.controller.ActionResult<br/>Field teammates.ui.controller.ActionResult.account<br/>At ActionResult.java:[line 51]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75959');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminEmailComposePageData.ajaxStatus</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75959" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminEmailComposePageData<br/>Field teammates.ui.pagedata.AdminEmailComposePageData.ajaxStatus<br/>At AdminEmailImageUploadAction.java:[line 22]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76010');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminEmailComposePageData.fileSrcUrl</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76010" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminEmailComposePageData<br/>Field teammates.ui.pagedata.AdminEmailComposePageData.fileSrcUrl<br/>At AdminEmailImageUploadAction.java:[line 21]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76061');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminEmailComposePageData.groupReceiverListFileKey</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76061" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminEmailComposePageData<br/>Field teammates.ui.pagedata.AdminEmailComposePageData.groupReceiverListFileKey<br/>At AdminEmailGroupReceiverListUploadAction.java:[line 68]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76112');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminEmailComposePageData.isFileUploaded</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76112" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminEmailComposePageData<br/>Field teammates.ui.pagedata.AdminEmailComposePageData.isFileUploaded<br/>At AdminEmailImageUploadAction.java:[line 20]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76163');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData.ajaxStatus</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76163" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData<br/>Field teammates.ui.pagedata.AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData.ajaxStatus<br/>At AdminEmailCreateGroupReceiverListUploadUrlAction.java:[line 22]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76214');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData.nextUploadUrl</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76214" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData<br/>Field teammates.ui.pagedata.AdminEmailCreateGroupReceiverListUploadUrlAjaxPageData.nextUploadUrl<br/>At AdminEmailCreateGroupReceiverListUploadUrlAction.java:[line 20]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76265');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminHomePageData.instructorAddingResultForAjax</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76265" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminHomePageData<br/>Field teammates.ui.pagedata.AdminHomePageData.instructorAddingResultForAjax<br/>At AdminInstructorAccountAddAction.java:[line 51]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76466');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminStudentGoogleIdResetPageData.isGoogleIdReset</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76466" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminStudentGoogleIdResetPageData<br/>Field teammates.ui.pagedata.AdminStudentGoogleIdResetPageData.isGoogleIdReset<br/>At AdminStudentGoogleIdResetAction.java:[line 62]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76517');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.AdminStudentGoogleIdResetPageData.statusForAjax</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76517" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.AdminStudentGoogleIdResetPageData<br/>Field teammates.ui.pagedata.AdminStudentGoogleIdResetPageData.statusForAjax<br/>At AdminStudentGoogleIdResetAction.java:[line 58]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76568');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.CourseStatsPageData.courseDetails</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76568" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.CourseStatsPageData<br/>Field teammates.ui.pagedata.CourseStatsPageData.courseDetails<br/>At CourseStatsPageAction.java:[line 19]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76619');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.CreateImageUploadUrlAjaxPageData.ajaxStatus</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76619" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.CreateImageUploadUrlAjaxPageData<br/>Field teammates.ui.pagedata.CreateImageUploadUrlAjaxPageData.ajaxStatus<br/>At CreateImageUploadUrlAction.java:[line 24]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76670');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.CreateImageUploadUrlAjaxPageData.nextUploadUrl</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76670" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.CreateImageUploadUrlAjaxPageData<br/>Field teammates.ui.pagedata.CreateImageUploadUrlAjaxPageData.nextUploadUrl<br/>At CreateImageUploadUrlAction.java:[line 23]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76721');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.FeedbackSessionStatsPageData.sessionDetails</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76721" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.FeedbackSessionStatsPageData<br/>Field teammates.ui.pagedata.FeedbackSessionStatsPageData.sessionDetails<br/>At FeedbackSessionStatsPageAction.java:[line 28]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76847');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.InstructorFeedbackQuestionVisibilityMessagePageData.visibilityMessage</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76847" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.InstructorFeedbackQuestionVisibilityMessagePageData<br/>Field teammates.ui.pagedata.InstructorFeedbackQuestionVisibilityMessagePageData.visibilityMessage<br/>At InstructorFeedbackQuestionVisibilityMessageAction.java:[line 21]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76898');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.InstructorFeedbackResponseCommentAjaxPageData.errorMessage</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76898" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.InstructorFeedbackResponseCommentAjaxPageData<br/>Field teammates.ui.pagedata.InstructorFeedbackResponseCommentAjaxPageData.errorMessage<br/>At InstructorFeedbackResponseCommentAddAction.java:[line 71]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77000');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.InstructorStudentRecordsPageData.spa</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77000" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.InstructorStudentRecordsPageData<br/>Field teammates.ui.pagedata.InstructorStudentRecordsPageData.spa<br/>At InstructorStudentRecordsPageData.java:[line 41]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77102');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: teammates.ui.pagedata.StudentProfileCreateFormUrlAjaxPageData.formUrl</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77102" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class teammates.ui.pagedata.StudentProfileCreateFormUrlAjaxPageData<br/>Field teammates.ui.pagedata.StudentProfileCreateFormUrlAjaxPageData.formUrl<br/>At StudentProfileCreateFormUrlAjaxPageData.java:[line 12]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING: Reliance on default encoding</a>
+</h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      
+<h2>
+<a name="EI_EXPOSE_REP">EI_EXPOSE_REP: May expose internal representation by returning reference to mutable object</a>
+</h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    
+<h2>
+<a name="EI_EXPOSE_REP2">EI_EXPOSE_REP2: May expose internal representation by incorporating reference to mutable object</a>
+</h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    
+<h2>
+<a name="EQ_COMPARETO_USE_OBJECT_EQUALS">EQ_COMPARETO_USE_OBJECT_EQUALS: Class defines compareTo(...) and uses Object.equals()</a>
+</h2>
+
+  <p> This class defines a <code>compareTo(...)</code> method but inherits its
+  <code>equals()</code> method from <code>java.lang.Object</code>.
+    Generally, the value of compareTo should return zero if and only if
+    equals returns true. If this is violated, weird and unpredictable
+    failures will occur in classes such as PriorityQueue.
+    In Java 5 the PriorityQueue.remove method uses the compareTo method,
+    while in Java 6 it uses the equals method.</p>
+
+<p>From the JavaDoc for the compareTo method in the Comparable interface:
+<blockquote>
+It is strongly recommended, but not strictly required that <code>(x.compareTo(y)==0) == (x.equals(y))</code>.
+Generally speaking, any class that implements the Comparable interface and violates this condition
+should clearly indicate this fact. The recommended language
+is "Note: this class has a natural ordering that is inconsistent with equals."
+</blockquote></p>
+
+    
+<h2>
+<a name="IC_INIT_CIRCULARITY">IC_INIT_CIRCULARITY: Initialization circularity</a>
+</h2>
+
+  <p> A circularity was detected in the static initializers of the two
+  classes referenced by the bug instance.&nbsp; Many kinds of unexpected
+  behavior may arise from such circularity.</p>
+
+    
+<h2>
+<a name="NP_NULL_PARAM_DEREF">NP_NULL_PARAM_DEREF: Method call passes null for non-null parameter</a>
+</h2>
+      
+      <p>
+      This method call passes a null value for a non-null method parameter.
+    Either the parameter is annotated as a parameter that should
+    always be non-null, or analysis has shown that it will always be
+    dereferenced.
+      </p>
+      
+   
+<h2>
+<a name="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE: Redundant nullcheck of value known to be non-null</a>
+</h2>
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    
+<h2>
+<a name="REC_CATCH_EXCEPTION">REC_CATCH_EXCEPTION: Exception is caught when Exception is not thrown</a>
+</h2>
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+  <pre>
+  try {
+    ...
+  } catch (RuntimeException e) {
+    throw e;
+  } catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+  }</pre>
+  
+     
+<h2>
+<a name="RR_NOT_CHECKED">RR_NOT_CHECKED: Method ignores results of InputStream.read()</a>
+</h2>
+
+  <p> This method ignores the return value of one of the variants of
+  <code>java.io.InputStream.read()</code> which can return multiple bytes.&nbsp;
+  If the return value is not checked, the caller will not be able to correctly
+  handle the case where fewer bytes were read than the caller requested.&nbsp;
+  This is a particularly insidious kind of bug, because in many programs,
+  reads from input streams usually do read the full amount of data requested,
+  causing the program to fail only sporadically.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+</h2>
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD: Unread public/protected field</a>
+</h2>
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    
+<h2>
+<a name="UWF_UNWRITTEN_FIELD">UWF_UNWRITTEN_FIELD: Unwritten field</a>
+</h2>
+
+  <p> This field is never written.&nbsp; All reads of it will return the default
+value. Check for errors (should it have been initialized?), or remove it if it is useless.</p>
+
+    </body>
+</html>

@@ -179,6 +179,89 @@ It would be a good practice to change `HashMap<String, CourseSummaryBundle>` to 
 
 ##### Findbugs Enforcement
 
+Findbugs is a powerful static analysis tool as it can examine binary code rather than source code of Java. Therefore, it can find more "bugs" than pmd and checkstyle.
+
+Findbugs doesn't support printing violations in console. There are only two options for error reporting: `html` and `xml`. [Here](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/bugPrevention/findbugs/main.html) is the `html` report of findbugs of TEAMMATES production code.
+
+This is what it looks like when run `./gradlew findbugsMain`
+
+```
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:findbugsMain FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':findbugsMain'.
+> FindBugs rule violations were found. See the report at: file:///Users/XP/Documents/teammates-git/build/reports/findbugs/main.html
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 1 mins 2.361 secs
+```
+
+To print violation in console is essential for a CI managed project. One possible solution for this is to ask `findbugs` to generate `xml` report and write a separate task to print the report in console.
+
+```
+task printFindbugsMainResults << {
+    printFindbugsXml findbugsMain.reports.xml.destination
+}
+
+findbugsMain.finalizedBy printFindbugsMainResults
+```
+
+[Here](https://github.com/xpdavid/teammates/blob/findbugs/build.gradle#L348) is what the "Printer" looks like in `Gradle`. 
+
+Below is the violation report print by the "Printer".
+
+```
+$ ./gradlew findbugsMain
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:findbugsMain UP-TO-DATE
+:printFindbugsMainResults
+
+[FINDBUGS]
+1. [EQ_COMPARETO_USE_OBJECT_EQUALS] {BAD_PRACTICE} see more at http://findbugs.sourceforge.net/bugDescriptions.html#EQ_COMPARETO_USE_OBJECT_EQUALS
+	 Class CommentAttributes.java at teammates.common.datatransfer.attributes.CommentAttributes[27:331]
+	 Method compareTo at CommentAttributes.java[320:323]
+
+2. [EQ_COMPARETO_USE_OBJECT_EQUALS] {BAD_PRACTICE} see more at http://findbugs.sourceforge.net/bugDescriptions.html#EQ_COMPARETO_USE_OBJECT_EQUALS
+	 Class CourseAttributes.java at teammates.common.datatransfer.attributes.CourseAttributes[18:151]
+	 Method compareTo at CourseAttributes.java[134:137]
+
+...
+
+* teammates.common.datatransfer - Total Bugs: 0
+* teammates.common.datatransfer.attributes - Total Bugs: 2 Priority2: 2
+* teammates.common.datatransfer.questions - Total Bugs: 0
+* teammates.common.exception - Total Bugs: 0
+* teammates.common.util - Total Bugs: 4 Priority1: 3 Priority2: 1
+* teammates.logic.api - Total Bugs: 0
+* teammates.logic.backdoor - Total Bugs: 0
+* teammates.logic.core - Total Bugs: 1 Priority2: 1
+* teammates.storage.api - Total Bugs: 0
+* teammates.storage.entity - Total Bugs: 0
+* teammates.storage.search - Total Bugs: 1 Priority2: 1
+* teammates.ui.automated - Total Bugs: 0
+* teammates.ui.controller - Total Bugs: 19 Priority2: 19
+* teammates.ui.datatransfer - Total Bugs: 0
+* teammates.ui.pagedata - Total Bugs: 4 Priority2: 4
+* teammates.ui.template - Total Bugs: 1 Priority2: 1
+
+Summary: Total 32 Bugs
+```
+
+Through this, we can integrate `findbugs` static analysis tools into our project. The developer can run it locally and the CI can run it automatically.
+
+Note that we use `filter` to suppress some bugs in findBugs. [Here](https://github.com/xpdavid/teammates/blob/findbugs/static-analysis/teammates-findbugs-filter.xml) is the filter file. More rule need to be added if we confirm they are not bugs.
+
 ### Analysis
 
 ### Conclusion
