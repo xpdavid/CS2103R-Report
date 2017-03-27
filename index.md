@@ -6,13 +6,13 @@ Static analysis tools have been widely used in TEAMMATES, which help us a lot in
 
 #### Background
 
-Currently, four static analysis tools are used in TEAMMATES for `Java`.
+Currently, four static analysis tools are used in TEAMMATES for Java.
 
 Here are the configurations of them.
 
 - [`CheckStyle`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-checkstyle.xml)
 - [`Macker`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-macker.xml)
-- [`PMD`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmd.xml) (As we decide some of rules in PMD will only be enforced in production code, we write another [configuration](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmdMain.xml) in addition to this)
+- [`PMD`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmd.xml) (As we decide some of rules in PMD will only be enforced in production code, we write [another configuration](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmdMain.xml) in addition to this)
 - [`FindBugs`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/build.gradle#L326) (Only one pattern `FindDeadLocalStores` is used)
 
 *Updated at commit [bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099) at master* 
@@ -21,13 +21,13 @@ In discussion in [#6519](https://github.com/TEAMMATES/teammates/issues/6519), we
 
 `Macker` is used to detect violations in high-level design. For example, one of the current enforced rule says that ["test cases should not be dependent on each other"](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-macker.xml#L3). Currently, there are only two rules for this analyser.
 
-`Findbugs` cannot print violations in build log. We cannot check wether the build is successful or not in CI environment. Therefore, we exclude it and only put one rule for it.
+`Findbugs` cannot print violations in build log. We cannot check which rules are violated in console when build fails. Therefore, we exclude it and only enforce one rule from it.
 
 ### Discussion
 
-This report will discuss possible rules in `CheckStyle`, `Macker`, `PMD` and `Findbugs`. Concrete configurations or customised checker will be proposed.
+This report will discuss possible rules in `CheckStyle`, `Macker`, `PMD` and `Findbugs`. Concrete configurations or customised checkers will be proposed.
 
-We will divide the discussion into three section: `Coding Standard`, `Design Principle` and `Bug Prevention`. 
+We will divide the discussion into three sections: `Coding Standard`, `Design Principle` and `Bug Prevention`. 
 
 #### Coding Standard
 
@@ -58,16 +58,16 @@ log(ast.getLineNo(), ast.getColumnNo(),
         String.format(MSG_NAMING, Arrays.toString(allowedPrefixes)), ast.getText()); // violation caught
 ```
 
-When run the check against TEAMMATES ([bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099 at `master`)), here are reports for `checkstyleMain` and `checkstyleTest`
+When run the check against TEAMMATES ([bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099 at `master`)), here are the reports for `checkstyleMain` and `checkstyleTest`
 
 - [CheckstyleMain](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/booleanNaming/main.html)
 - [CheckstyleTest](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/booleanNaming/test.html)
 
-For production code, there are 122 violations. Some violations are valid such as `participantIsGeneral`. `isParticipantGeneral` is more appropriate in this case. Some of the violations may be reasonable as its name may start with `allow` instead of `is, has, can, should`. Some variable try to represent the negation of thing such as `isNotTeammatesLog`, but there are some false positives. For example, `isNotSureAllowed` and `isNotificationIconShown` should not be included.
+For production code, there are 122 violations. Some violations are valid such as `participantIsGeneral`. `isParticipantGeneral` is more appropriate in this case. Some of the violations may be reasonable as the names may start with `allow` instead of `is, has, can, should`. Some boolean variables try to represent the negation of thing such as `isNotTeammatesLog`, but there are some false positives. For example, `isNotSureAllowed` and `isNotificationIconShown` should not be included.
 
 ##### Variable Declaration Usage Distance
 
-In the coding standard, it says that ["variables should be initialised where they are declared and they should be declared in the smallest scope possible"](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html#general-naming-conventions). There is a rule existing in `CheckStyle` for this coding standard: `VariableDeclarationUsageDistance`, which just checks the distance between declaration of variable and its first usage.
+In the coding standard, it says that ["variables should be initialised where they are declared and they should be declared in the smallest scope possible"](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html#general-naming-conventions). There is a rule existing in `CheckStyle` for this coding standard: `VariableDeclarationUsageDistance`, which just checks the distance between declaration of variables and their first usages.
 
 The default distance of this check is `3`. Here is the graph of number of violations VS `distance`. (*Based on [8f873](https://github.com/TEAMMATES/teammates/tree/8f87384b01cbe910d805d33bd19f77636c85d06d) at master*)
 
@@ -106,7 +106,7 @@ Sample violation:
 
 ##### Spelling of words
 
-The most boring thing for reviewer is to finding typos in PR. The reviewer may need to spend unnecessary time finding typos. Also, the submitter get disappointed. Here is the solution. If we follow strictly the camel case naming conversion and use underscore to separate word in constants. We can leave this work to computer bots.
+The most boring thing for reviewers is to finding typos in PR. The reviewer may need to spend unnecessary time finding typos. Also, the submitter get disappointed. Here is the solution. If we follow strictly the camel case naming conversion and use underscore to separate word in constants. We can leave this work to computer bots.
 
 The idea is that we extract words from variable names or method names and check whether it exists in english dictionary to find typos.
 
@@ -145,7 +145,7 @@ In addition, we also found a lot of `name1`, `name2`, `student1` etc. For test c
 
 ![Image](codingStandard/spelling/violation_student1.png)
 
-[`CheckStyle` report for Test code](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/spelling/test.html) gets 532 violations. Note that a new file ([Regex Name](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict-regex.txt)) should be added as we allow naming like `name1`, `session1` etc in test code.
+[`CheckStyle` report for Test code](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/spelling/test.html) gets 532 violations. Note that a new file ([Regex Name](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict-regex.txt)) should be added as we now allow naming like `name1`, `session1` etc in test code.
 
 Some of them is false positive. However, there are valid cases.
 
