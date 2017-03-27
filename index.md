@@ -104,7 +104,7 @@ The rule is enforced in [#6814](https://github.com/TEAMMATES/teammates/pull/6814
 Sample violation:
 ![Image](codingStandard/commentsIndentation/violation.png)
 
-##### Spelling of words
+##### Spelling of Words
 
 The most boring thing for reviewers is to finding typos in PR. The reviewer may need to spend unnecessary time finding typos. Also, the submitter get disappointed. Here is the solution. If we follow strictly the camel case naming conversion and use underscore to separate word in constants. We can leave this work to computer bots.
 
@@ -224,7 +224,7 @@ The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid
 
 #### Bug Prevention
 
-##### Findbugs Enforcement
+##### `Findbugs` Enforcement
 
 Findbugs is a powerful static analysis tool as it can examine binary code rather than source code of Java. Therefore, it can find more "bugs" than `PMD` and `CheckStyle`.
 
@@ -307,6 +307,28 @@ Through this, we can integrate `findbugs` static analysis tools into TEAMMATES. 
 
 Note that we use [`filter`](https://github.com/xpdavid/teammates/blob/findbugs/static-analysis/teammates-findbugs-filter.xml) to suppress some bugs in `FindBugs`. More filters should be added if we confirm they are not bugs.
 
+##### Usage of `Assumption.java`
+
+Currently, there exists inconsistency in using of `Assumption` and `RuntimeException` in production code in TEAMMATES.
+
+`Assumption`:
+![Image](bugPrevention/assumption/assumption.png)
+
+`RuntimeException`:
+![Image](bugPrevention/assumption/runtimeException.png)
+
+In both way, if the condition fails, the application will be stopped and an error email will be sent to admin.
+
+There is a rule in `PMD` called `AvoidThrowingRawExceptionTypes` and it indicates that throwing raw exception types is not a practice in software engineering. In addition, we may want to make clear that we use assertions to check something that should never happen, while we use exceptions to check something that might happen. `RuntimeException` is used here only to indicated that something should never happen occurs and thus there is a bug. Therefore, we shall change all `RuntimeException` to make use of `Assumption` class.
+
+When apply the `PMD` rule `AvoidThrowingRawExceptionTypes`, [the report](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/bugPrevention/assumption/main.html) indicated there are 11 violations for production code. Some of them even have `// TODO` tags to ask the programmers to replace the `RuntimeException` with `Assumption.assert*`.
+
+For test code, we could be more forgivable as we might use `RuntimeException` to indicate error.
+
+![Image](bugPrevention/assumption/usageInTestCode.png)
+
+It is possible to replace the `RuntimeException` with `fail()` method. There are only 14 violation for test code by [`PMD` report](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/bugPrevention/assumption/test.html).
+
 ### Analysis
 
 Through the above discussion, we can see that some rules are worth to enforce, while some rules require a lot of efforts to enforce them. We will looks at them individually. 
@@ -330,6 +352,8 @@ Through the above discussion, we can see that some rules are worth to enforce, w
 ##### Bug Prevention
 
 - It **worth** enforcing the `Findbugs` plugins in our build process **with** suppression. FindBug is more powerful than `CheckStyle` and `PMD`. We now also have the ability to print violations in console.
+
+- It **wroth** enforcing the `AvoidThrowingRawExceptionTypes` rule to give good software engineering practice. We could be consistent that we use `Assumption` to detect bugs and use `Exception` to deal with exceptions.
 
 ### Conclusion
 
