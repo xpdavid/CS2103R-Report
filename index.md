@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Static analysis tools have been widely used in TEAMMATES, which help us a lot in maintaining coding standard, coding quality or even bug-free code. This report will explore more static analysis rules for Java and analysis the practicability of these rules.
+Static analysis tools have been widely used in TEAMMATES, which help us a lot in maintaining coding standard, coding quality or even bug-free code. This report will explore more static analysis rules for Java in TEAMMATES and analysis the practicability of these rules.
 
 #### Background
 
@@ -27,7 +27,7 @@ In discussion in [#6519](https://github.com/TEAMMATES/teammates/issues/6519), we
 
 This report will discuss possible rules in `CheckStyle`, `Macker`, `PMD` and `Findbugs`. Concrete configurations or customised checkers will be proposed.
 
-We will divide the discussion into three sections: `Coding Standard`, `Design Principle` and `Bug Prevention`. 
+We shall divide the discussion into three sections: `Coding Standard`, `Design Principle` and `Bug Prevention`. 
 
 #### Coding Standard
 
@@ -39,7 +39,7 @@ In the coding standard, it says that ["boolean variables should be prefixed with
 
 Currently, all the static analysis tools don't support check for this naming conversion. We shall write our own check.
 
-`CheckStyle` provided a way to write customised check. Basically, [the check](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/src/java/BooleanNameCheck.java) will check the naming conversion for each boolean variable.
+`CheckStyle` provided us [a way to write customised check](http://checkstyle.sourceforge.net/writingchecks.html). Basically, [the check](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/src/java/BooleanNameCheck.java) will check the naming conversion for each boolean variable.
 
 ``` java
 // part of the code (Core Logic)
@@ -58,7 +58,7 @@ log(ast.getLineNo(), ast.getColumnNo(),
         String.format(MSG_NAMING, Arrays.toString(allowedPrefixes)), ast.getText()); // violation caught
 ```
 
-When run the check against TEAMMATES ([bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099 at `master`)), here are the reports for `checkstyleMain` and `checkstyleTest`
+Run the check against TEAMMATES ([bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099 at `master`)) and we will get violation reports for `checkstyleMain` and `checkstyleTest`
 
 - [CheckstyleMain](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/booleanNaming/main.html)
 - [CheckstyleTest](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/booleanNaming/test.html)
