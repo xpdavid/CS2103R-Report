@@ -27,7 +27,7 @@ In discussion in [#6519](https://github.com/TEAMMATES/teammates/issues/6519), we
 
 This report will discuss possible rules in `CheckStyle`, `Macker`, `PMD` and `Findbugs`. Concrete configurations or customised checkers will be proposed.
 
-We shall divide the discussion into three sections: `Coding Standard`, `Design Principle` and `Bug Prevention`. 
+We shall divide the discussion into three sections: [**Coding Standard**](#coding-standard), [**Design Principle**](#design-principle) and [**Bug Prevention**](#bug-prevention). 
 
 #### Coding Standard
 
