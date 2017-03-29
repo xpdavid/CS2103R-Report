@@ -31,7 +31,7 @@ We shall divide the discussion into three sections: [**Coding Standard**](#codin
 
 #### Coding Standard
 
-We use coding standard in [OSS Generic](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) project for TEAMMATES. Most of the standards have been enforced in `CheckStyle` or `PMD`. Severals of them can be explored more.
+We use coding standard in [OSS Generic](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) project for TEAMMATES. Most of the standards have been enforced using `CheckStyle` or `PMD`. Severals of them can be explored more.
 
 ##### Boolean Variable Naming Conversion
 
@@ -39,7 +39,7 @@ In the coding standard, it says that ["boolean variables should be prefixed with
 
 Currently, all the static analysis tools don't support check for this naming conversion. We shall write our own check.
 
-`CheckStyle` provided us [a way to write customised check](http://checkstyle.sourceforge.net/writingchecks.html). Basically, [the check](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/src/java/BooleanNameCheck.java) will check the naming conversion for each boolean variable.
+`CheckStyle` provides us [a way to write customised check](http://checkstyle.sourceforge.net/writingchecks.html). Basically, [the check](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/src/java/BooleanNameCheck.java) will check the naming conversion for each boolean variable.
 
 ``` java
 // part of the code (Core Logic)
@@ -108,9 +108,9 @@ Sample violation:
 
 The most boring thing for reviewers is to finding typos in PR. The reviewer may need to spend unnecessary time finding typos. Also, the submitter get disappointed. Here is the solution. If we follow strictly the camel case naming conversion and use underscore to separate word in constants. We can leave this work to computer bots.
 
-The idea is that we extract words from variable names or method names and check whether it exists in english dictionary to find typos.
+The idea is that we extract words from variable names or method names and check whether it exists in any english dictionary to find typos.
 
-There existing [a comprehensive english dictionary](https://github.com/dwyl/english-words), which included around 34 thousands english words. In addition, we could define our own words such as `html`, `css` and `tooltips`.
+There existing [a comprehensive english dictionary](https://github.com/dwyl/english-words), which includes around 34 thousands english words. In addition, we could define our own words such as `html`, `css` and `tooltips`.
 
 Customised `CheckStyle` check:
 
@@ -132,7 +132,7 @@ public void visitToken(DetailAST ast) {
 }
 ```
 
-Here are three dictionaries used in the checks
+Here are two dictionaries used in the checks
 
 - [English words](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/dict.txt)
 - [Words defined by TEAMMATES](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict.txt)
@@ -145,7 +145,7 @@ In addition, we also found a lot of `name1`, `name2`, `student1` etc. For test c
 
 ![Image](codingStandard/spelling/violation_student1.png)
 
-[`CheckStyle` report for Test code](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/spelling/test.html) gets 532 violations. Note that a new file ([Regex Name](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict-regex.txt)) should be added as we now allow naming like `name1`, `session1` etc in test code.
+[`CheckStyle` report for test code](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/codingStandard/spelling/test.html) gets 532 violations. Note that a new file ([Regex Name](https://github.com/xpdavid/teammates/blob/checkstyle-boolean-variable/static-analysis/checkstyle-lib/teammates-dict-regex.txt)) should be added as we now allow naming like `name1`, `session1` etc in test code.
 
 Some of them is false positive. However, there are valid cases.
 
@@ -217,8 +217,8 @@ We will examine the design one by one.
 - Test cases should not be dependent on each other (already there)
 - Only browser tests tests can access page object classes (already there)
 - The Test Driver should be only used in test cases
-- util and browsertest cannot access GaeSimulation
-- action test cases should only interact with back-end through BackDoor API (The rule should be there, but there are too many violations)
+- `util` and `browsertest` cannot access `GaeSimulation`
+- Action test cases should only interact with back-end through BackDoor API (The rule should be there, but there are too many violations)
 
 The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/additional-macker/static-analysis/teammates-macker.xml).
 
@@ -319,7 +319,7 @@ Currently, there exists inconsistency in using of `Assumption` and `RuntimeExcep
 
 In both way, if the condition fails, the application will be stopped and an error email will be sent to admin.
 
-There is a rule in `PMD` called `AvoidThrowingRawExceptionTypes` and it indicates that throwing raw exception types is not a practice in software engineering. In addition, we may want to make clear that we use assertions to check something that should never happen, while we use exceptions to check something that might happen. `RuntimeException` is used here only to indicated that something should never happen occurs and thus there is a bug. Therefore, we shall change all `RuntimeException` to make use of `Assumption` class.
+There is a rule in `PMD` called `AvoidThrowingRawExceptionTypes` and it indicates that throwing raw exception types is not a practice in software engineering. In addition, we may want to make clear that we use assertions to check something that should never happen, while we use exceptions to check something that might happen. `RuntimeException` is used here only to indicated that something should never happen occurs and thus there is a bug. Therefore, we shall change all `RuntimeException` to make use of `Assumption` class for production code.
 
 When apply the `PMD` rule `AvoidThrowingRawExceptionTypes`, [the report](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/bugPrevention/assumption/main.html) indicated there are 11 violations for production code. Some of them even have `// TODO` tags to ask the programmers to replace the `RuntimeException` with `Assumption.assert*`.
 
@@ -335,13 +335,13 @@ Through the above discussion, we can see that some rules are worth to enforce, w
 
 #### Coding Standard
 
-- It is **not** worth to force the rule for boolean variable naming conversion. The intention of the coding standard is to make code more readable. But the rule just simply check whether the boolean variables start with certain prefixes. There are many case that a boolean variable doesn't start with `is` but makes sense. However, we can keep the checks and run it frequently to check possible violation.
+- It is **not** worth to force the rule for boolean variable naming conversion. The intention of the coding standard is to make code more readable. But the rule just simply check whether the boolean variables start with certain prefixes. There are many case that a boolean variable doesn't start with `is` but makes sense. However, we can keep the checks and run it frequently to check possible violations.
 
 - It **worth** forcing the variable declaration usage distance rule for **production** code. By doing this, the code would become more readable as the developers don't need to remember declared variables. However, we should exclude this rule for test cases as sometimes we want to declare all test data first.
 
 - The comments Indentation rule is already forced in current production code.
 
-- It is **not** worth to force the spelling of words rule in TEAMMATES. The reason is obviously as the maintenance would be a nightmare. We invent new word everyday, isn't it? However, this check could be run frequently to check whether there are typos or not.
+- It is **not** worth to force the spelling of words rule in TEAMMATES. The reason is obviously as the maintenance would be a nightmare. We invent new words everyday, isn't it? However, this check could be run frequently to check whether there are typos or not.
 
 #### Design Principle
 
