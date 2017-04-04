@@ -1,7 +1,7 @@
 ## Technical Report: Static Analysis (Java) in TEAMMATES
 ### Introduction
 
-Static analysis tools have been widely used in TEAMMATES, which help us a lot in maintaining coding standard, coding quality or even bug-free code. This report will explain how static analysis tools have been used currently in the project. In addition, it will also explore some additional static analysis rules, which could be enforced gradually in the project.
+Static analysis tools have been widely used in TEAMMATES, which help us a lot in maintaining coding standard, coding quality or even bug-free code. This report will explain how static analysis tools for Java have been used currently in the project. In addition, it will also explore some additional static analysis rules, which could be enforced gradually in the project.
 
 #### Existing Static Analysis Rules
 
@@ -9,7 +9,7 @@ Currently, four static analysis tools are used in TEAMMATES for Java. All of the
 
 ##### CheckStyle
 
-`CheckStyle` reports violation based on provided [`xml`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-checkstyle.xml) file. We use it to enforce stylistic standard. For example, we enforce that the right curly bracket (`{`) should not be put in a new line.
+`CheckStyle` reports violationS based on provided [`xml`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-checkstyle.xml) file. We use it to enforce stylistic standard. For example, we enforce that the right curly bracket (`{`) should not be put in a new line.
 
 ##### Macker
 
@@ -321,7 +321,7 @@ Currently, there exists inconsistency in using of `Assumption` and `RuntimeExcep
 
 In both way, if the condition fails, the application will be stopped and an error email will be sent to admin.
 
-There is a rule in `PMD` called `AvoidThrowingRawExceptionTypes` and it indicates that throwing raw exception types is not a practice in software engineering. In addition, we may want to make clear that we use assertions to check something that should never happen, while we use exceptions to check something that might happen. `RuntimeException` is used here only to indicated that something should never happen occurs and thus there is a bug. Therefore, we shall change all `RuntimeException` to make use of `Assumption` class for production code.
+There is a rule in `PMD` called `AvoidThrowingRawExceptionTypes` and it indicates that throwing raw exception types is not a practice in software engineering. We may want to make it consistent that we use `Assumption.assert*` in the production code. Therefore, we shall change all `RuntimeException` to make use of `Assumption` class for production code.
 
 When apply the `PMD` rule `AvoidThrowingRawExceptionTypes`, [the report](http://htmlpreview.github.io/?https://github.com/xpdavid/CS2103R-Report/blob/master/bugPrevention/assumption/main.html) indicated there are 11 violations for production code. Some of them even have `// TODO` tags to ask the programmers to replace the `RuntimeException` with `Assumption.assert*`.
 
@@ -335,11 +335,11 @@ It is possible to replace the `RuntimeException` with `fail()` method. There are
 
 #### Existing Static Analysis Rule
 
-Through my observation in TEAMMATES's PR process, the existing static analysis rules works effectively to detect most of potential issues in PRs. At most of time, there is no need for reviewers to point out stylistic issue. Therefore, we could keep the existing static analysis rule there and keep benefiting from it.
+Through my observation in TEAMMATES's PR process, the existing static analysis rules work well and detect most of potential issues in PRs effectively. At most of time, there is no need for reviewers to point out stylistic issue. Therefore, we could keep the existing static analysis rule.
 
 #### Additional Static Analysis Rule
 
-When dealing with new rules, we must be very careful as the side effects of some of the new rules may much more than the benefits. Through the above discussion, we can see that some rules are worth to enforce, while some rules require a lot of efforts to enforce them. We will looks at them individually. 
+When dealing with new rules, we must be very careful as the side effects of some of the new rules may be much more than the benefits. Through the above discussion, we can see that some rules are worth to enforce, while some rules require a lot of efforts to enforce them. We will looks at them individually. 
 
 ##### Coding Standard
 
@@ -359,9 +359,9 @@ When dealing with new rules, we must be very careful as the side effects of some
 
 ##### Bug Prevention
 
-- It **worth** enforcing the `Findbugs` plugins in our build process **with** suppression. FindBug is more powerful than `CheckStyle` and `PMD`. We now also have the ability to print violations in console.
+- It **worth** enforcing the `Findbugs` plugins in our build process **with** suppression. FindBug may find "bugs" that `CheckStyle` and `PMD` could not find. We now also have the ability to print violations in console.
 
-- It **wroth** enforcing the `AvoidThrowingRawExceptionTypes` rule to give good software engineering practice. We could be consistent that we use `Assumption` to detect bugs and use `Exception` to deal with exceptions.
+- It **wroth** enforcing the `AvoidThrowingRawExceptionTypes` rule to give a good software engineering practice. We could be consistent that we use `Assumption` to detect bugs and use `Exception` to deal with exceptions.
 
 ### Conclusion
 
