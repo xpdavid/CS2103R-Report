@@ -1,33 +1,35 @@
-## Additional Static Analysis Rules for TEAMMATES (Java)
-
+## Technical Report: Static Analysis (Java) in TEAMMATES
 ### Introduction
 
-Static analysis tools have been widely used in TEAMMATES, which help us a lot in maintaining coding standard, coding quality or even bug-free code. This report will explore more static analysis rules for Java in TEAMMATES and analysis the practicability of these rules.
+Static analysis tools have been widely used in TEAMMATES, which help us a lot in maintaining coding standard, coding quality or even bug-free code. This report will explain how static analysis tools have been used currently in the project. In addition, it will also explore some additional static analysis rules, which could be enforced gradually in the project.
 
-#### Background
+#### Existing Static Analysis Rules
 
-Currently, four static analysis tools are used in TEAMMATES for Java.
+Currently, four static analysis tools are used in TEAMMATES for Java. All of them are integrated to `Gradle` build task `staticAnalysis` in CI process. We shall looks at them one by one.
 
-Here are the configurations of them.
+##### CheckStyle
 
-- [`CheckStyle`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-checkstyle.xml)
-- [`Macker`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-macker.xml)
-- [`PMD`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmd.xml) (As we decide some of rules in PMD will only be enforced in production code, we write [another configuration](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmdMain.xml) in addition to this)
-- [`FindBugs`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/build.gradle#L326) (Only one pattern `FindDeadLocalStores` is used)
+`CheckStyle` reports violation based on provided [`xml`](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-checkstyle.xml) file. We use it to enforce stylistic standard. For example, we enforce that the right curly bracket (`{`) should not be put in a new line.
 
-*Updated at commit [bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099) at master* 
-
-In discussion in [#6519](https://github.com/TEAMMATES/teammates/issues/6519), we agree that we use `CheckStyle` for style issues and `PMD` for coding/design issues. The rest of the report will follow the rule also.
+##### Macker
 
 `Macker` is used to detect violations in high-level design. For example, one of the current enforced rule says that ["test cases should not be dependent on each other"](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-macker.xml#L3). Currently, there are only two rules for this analyser.
 
-`Findbugs` cannot print violations in build log. We cannot check which rules are violated in console when build fails. Therefore, we exclude it and only enforce one rule from it.
+##### PMD
 
-### Discussion
+`PMD` is used to find design problem such as unused import. [The rule sets](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmd.xml) of `PMD` are much more than that in `CheckStyle`. Some rules in `PMD` will only make sense for production code. Therefore, we have [another `PMD` configuration](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/static-analysis/teammates-pmdMain.xml) for `main` code.
+
+##### FindBugs
+
+Only one [rule(`FindDeadLocalStores`)](https://github.com/TEAMMATES/teammates/blob/bd97f4210749b8a58a8285258098c2f91d492099/build.gradle#L326) is enforced in `Findbugs` right now. `Findbugs` cannot print violations in build log. We cannot check which rules are violated in console when build fails. Therefore, we exclude it and only enforce one rule from it.
+
+*Links updated at commit [bd97f42](https://github.com/TEAMMATES/teammates/commit/bd97f4210749b8a58a8285258098c2f91d492099) at master* 
+
+### Additional Static Analysis Rules
 
 This report will discuss possible rules in `CheckStyle`, `Macker`, `PMD` and `Findbugs`. Concrete configurations or customised checkers will be proposed.
 
-We shall divide the discussion into three sections: [**Coding Standard**](#coding-standard), [**Design Principle**](#design-principle) and [**Bug Prevention**](#bug-prevention). 
+We shall divide the discussion by content into three sections: [**Coding Standard**](#coding-standard), [**Design Principle**](#design-principle) and [**Bug Prevention**](#bug-prevention). 
 
 #### Coding Standard
 
@@ -331,9 +333,15 @@ It is possible to replace the `RuntimeException` with `fail()` method. There are
 
 ### Analysis
 
-Through the above discussion, we can see that some rules are worth to enforce, while some rules require a lot of efforts to enforce them. We will looks at them individually. 
+#### Existing Static Analysis Rule
 
-#### Coding Standard
+Through my observation in TEAMMATES's PR process, the existing static analysis rules works effectively to detect most of potential issues in PRs. At most of time, there is no need for reviewers to point out stylistic issue. Therefore, we could keep the existing static analysis rule there and keep benefiting from it.
+
+#### Additional Static Analysis Rule
+
+When dealing with new rules, we must be very careful as the side effects of some of the new rules may much more than the benefits. Through the above discussion, we can see that some rules are worth to enforce, while some rules require a lot of efforts to enforce them. We will looks at them individually. 
+
+##### Coding Standard
 
 - It is **not** worth to force the rule for boolean variable naming conversion. The intention of the coding standard is to make code more readable. But the rule just simply check whether the boolean variables start with certain prefixes. There are many case that a boolean variable doesn't start with `is` but makes sense. However, we can keep the checks and run it frequently to check possible violations.
 
@@ -343,7 +351,7 @@ Through the above discussion, we can see that some rules are worth to enforce, w
 
 - It is **not** worth to force the spelling of words rule in TEAMMATES. The reason is obviously as the maintenance would be a nightmare. We invent new words everyday, isn't it? However, this check could be run frequently to check whether there are typos or not.
 
-#### Design Principle
+##### Design Principle
 
 - It **worth**  enforcing the `PMD` rule `LooseCoupling`, which could make our API more flexible and I believe "avoid using implementation types and use the interface instead" is one of rule in API design.
 
@@ -357,6 +365,6 @@ Through the above discussion, we can see that some rules are worth to enforce, w
 
 ### Conclusion
 
-In conclusion, it worth enforcing most of the rule that are dicussed above for TEAMMATES. In addition, the not-worth ones can also be an option to find potential stylistic flaws, but we need put efforts to maintain them.
+In conclusion, we should keep using the existing static analysis rules and it worth enforcing most of the additional rules that are discussed above for TEAMMATES. In addition, the not-worth ones can also be an option to find potential stylistic flaws, but we need put efforts to maintain them.
 
 We are almost done with static analysis tools for Java (at least with `CheckStyle`, `Findbugs`, `Macker` and `PMD`), further exploration could be to make this process more automatic. For example, we can have PR-bot to comment violations. Also, for the spelling rule I have introduce or the boolean variable naming, the PR-bot could make comment it the PR but not necessary to make the build fail.
