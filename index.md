@@ -201,8 +201,6 @@ We will examine the design one by one.
 
 - Only `*Action` in can touch logic (especially `Logic.java` as Facade class)
 - `*PageData` is only used in `*Action` and `ActionResult`
-- `*Action` can only be created by `*ActionFactory`
-- `ActionResult` can only be created by `*Action`
 
 ![Image](designPrinciple/abstraction/LogicComponent.png)
 
