@@ -220,7 +220,7 @@ We will examine the design one by one.
 - `util` and `browsertest` should not access `GaeSimulation`
 - Action test cases should only interact with back-end through BackDoor API (The rule should be there, but there are too many violations)
 
-The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/additional-macker/static-analysis/teammates-macker.xml).
+The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/7086-additional-macker/static-analysis/teammates-macker.xml).
 
 #### Bug Prevention
 
