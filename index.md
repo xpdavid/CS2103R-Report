@@ -189,23 +189,28 @@ We will examine the design one by one.
 
 ![Image](designPrinciple/abstraction/packageDiagram.png)
 
-- The UI should not touch Storage directly
-- The Logic should not touch UI
-- The Storage should not touch Logic
-- The Storage should not touch UI
-- Client should not touch UI (This diagram need to be updated as Client can touch storage and logic)
-- `client::remoteapi` can be only access by `client::scripts`
-- `client::util` should only be used inside client (This diagram need to be updated to show `client::util`)
+- UI should not touch Storage
+- Logic should not touch UI
+- Storage should not touch Logic
+- Storage should not touch UI
+
+- Client scripts should be self-contained
+- Client should not touch UI
+- `client::remoteapi` can be only accessed by `client::scripts`
+- `client::util` should not depends on `client::script`
+
 
 ![Image](designPrinciple/abstraction/UiComponent.png)
 
-- Only `*Action` in can touch logic (especially `Logic.java` as Facade class)
-- `*PageData` is only used in `*Action` and `ActionResult`
+- Only *Action can touch Logic API
+- Templates are only used in Pagedata
+- Pagedata is only used in Controller
+- Controller should be self-contained
 
 ![Image](designPrinciple/abstraction/LogicComponent.png)
 
 - Each logic can only access its corresponding DB (e.g. AccountsLogic -> AccountsDb)
-- BackDoorServlet should only access BackDoorLogic, not `logic:core`
+- BackDoorServlet should not access `logic:core`
 
 ![Image](designPrinciple/abstraction/StorageComponent.png)
 
@@ -214,11 +219,12 @@ We will examine the design one by one.
 
 ![Image](designPrinciple/abstraction/TestDriverComponent.png)
 
-- Test cases should not be dependent on each other (already implemented)
-- Only browser tests tests can access page object classes (already implemented)
-- The Test Driver should only be used in test cases
-- `util` and `browsertest` should not access `GaeSimulation`
-- Action test cases should only interact with back-end through BackDoor API (The rule should be there, but there are too many violations)
+- Test cases should not be dependent on each other
+- Only UI tests can access page object classes
+- Test driver can only be accessed from test package
+- Only certain test cases can test storage:entity
+- Only certain test cases can access GaeSimulation/BackDoorLogic
+- BackDoor test driver is only for browser test
 
 The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/7086-additional-macker/static-analysis/teammates-macker.xml).
 
