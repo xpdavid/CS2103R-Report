@@ -343,7 +343,7 @@ When dealing with new rules, we must be very careful as the side effects of some
 
 - It is **not** worth to enforce the rule for boolean variable naming convention. The intention of the coding standard is to make code more readable. However, the customised check just simply checks whether the boolean variables start with certain prefixes. There are many case that a boolean variable doesn't start with `is` but makes sense. However, we can keep the checks and run it frequently to check possible violations.
 
-- It is **worth** enforcing the variable declaration usage distance rule for **production** code. By doing this, the code would become more readable as the developers don't need to remember declared variables. However, we should exclude this rule for test cases as sometimes we want to declare all test data first.
+- It is **not** worth to enforce the variable declaration usage distance rule. We could find some valid cases to violate this rule. For example, we may want to get all parameters in a controller at first rather than getting them when using them. This practice helps developers know which parameters the controller will use. Besides, for test code, as we have discussed in the previous section, we may want to declare all test data at the beginning. However, this checks could be used to detect violations such as initialising variable to `null`.
 
 - The `Comments Indentation` rule is already forced in current production code.
 
