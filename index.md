@@ -193,11 +193,12 @@ We will examine the design one by one.
 - Logic should not touch UI
 - Storage should not touch Logic
 - Storage should not touch UI
+- Common should not have dependencies to any packages except storage::entity
 
 - Client scripts should be self-contained
 - Client should not touch UI
-- `client::remoteapi` can be only accessed by `client::scripts`
-- `client::util` should not depends on `client::script`
+- client::remoteapi should not depend on client::scripts
+- client::util should not have dependencies to anything within the client package
 
 
 ![Image](designPrinciple/abstraction/UiComponent.png)
@@ -206,25 +207,41 @@ We will examine the design one by one.
 - Templates are only used in Pagedata
 - Pagedata is only used in Controller
 - Controller should be self-contained
+- Automated actions should be self-contained
+- Automated actions should not have dependencies to anything within the UI component
 
 ![Image](designPrinciple/abstraction/LogicComponent.png)
 
+- Logic classes can only access storage::api
 - Each logic can only access its corresponding DB (e.g. AccountsLogic -> AccountsDb)
-- BackDoorServlet should not access `logic:core`
+- LogicComponent: BackDoorServlet should not access logic::core/logic::api
+- logic::core should not access logic::api
+- logic::api/logic::core should not access logic::backdoor
+
 
 ![Image](designPrinciple/abstraction/StorageComponent.png)
 
-- `storage::entity` should only be accessed by `storage::api` and `common:datatransfer`
-- `storage::search` should only be accessed by `storage::api`
+- storage::search should not touch storage::entity
+- storage::entity should not depend on anything within the storage component
 
 ![Image](designPrinciple/abstraction/TestDriverComponent.png)
 
 - Test cases should not be dependent on each other
 - Only UI tests can access page object classes
-- Test driver can only be accessed from test package
 - Only certain test cases can test storage:entity
 - Only certain test cases can access GaeSimulation/BackDoorLogic
 - BackDoor test driver is only for browser test
+
+**Architectural rules for external API calls**
+
+- Java Logging API can only be accessed via Logger
+- Search API can only be accessed via storage::api and storage::search
+- Java Persistence API can only be applied to storage::entity
+- Google Cloud Storage API can only be accessed via GoogleCloudStorageHelper
+- Task Queue API can only be accessed via TaskQueuesLogic
+- Remote API can only be accessed via RemoteApiClient
+- JDO API can only be accessed via storage::api and client scripts
+- Servlet API can only be accessed via Servlet classes, GaeSimulation, and selected utility classes
 
 The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/7086-additional-macker/static-analysis/teammates-macker.xml).
 
