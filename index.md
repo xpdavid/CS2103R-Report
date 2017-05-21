@@ -243,7 +243,7 @@ We will examine the design one by one.
 - JDO API can only be accessed via storage::api and client scripts
 - Servlet API can only be accessed via Servlet classes, GaeSimulation, and selected utility classes
 
-The rule in `Macker` `xml` format can be found [here](https://github.com/xpdavid/teammates/blob/7086-additional-macker/static-analysis/teammates-macker.xml).
+**UPDATED**: The rule is enforced in TEAMMATES since [e587b4300bf06afe8c4eb322381f3eb29636683c](https://github.com/TEAMMATES/teammates/commit/e587b4300bf06afe8c4eb322381f3eb29636683c).
 
 #### Bug Prevention
 
